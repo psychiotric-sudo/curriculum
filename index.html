@@ -1,1877 +1,3615 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BSCE Curriculum | Bachelor of Science in Civil Engineering</title>
-  <meta name="description" content="Complete curriculum for Bachelor of Science in Civil Engineering (BSCE) program including all courses, units, and prerequisites.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --color-background: #111111;
-      --color-surface: #1a1a1a;
-      --color-surface-hover: #222222;
-      --color-border: #2a2a2a;
-      --color-text-primary: #eeeeee;
-      --color-text-secondary: #aaaaaa;
-      --color-text-muted: #666666;
-      --color-accent: #888888;
-      --spacing-xs: 0.5rem;
-      --spacing-sm: 0.75rem;
-      --spacing-md: 1rem;
-      --spacing-lg: 1.5rem;
-      --spacing-xl: 2rem;
-      --spacing-2xl: 3rem;
-      --radius-sm: 4px;
-      --radius-md: 6px;
-      --transition-fast: 150ms ease-in-out;
-      --transition-normal: 200ms ease-in-out;
-      --max-width: 1200px;
-      --font-family: 'Outfit', system-ui, -apple-system, sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      font-size: 16px;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-family);
-      background-color: var(--color-background);
-      color: var(--color-text-primary);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: var(--spacing-xl) var(--spacing-lg);
-    }
-
-    .year-section {
-      margin-bottom: var(--spacing-2xl);
-    }
-
-    .year-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: var(--spacing-lg);
-      padding-bottom: var(--spacing-md);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .semester-section {
-      margin-bottom: var(--spacing-xl);
-    }
-
-    .semester-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: var(--spacing-md) 0;
-    }
-
-    .semester-header h3 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--color-text-primary);
-    }
-
-    .semester-content {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-    }
-
-    .table-wrapper {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.875rem;
-    }
-
-    thead {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    th {
-      background: var(--color-surface);
-      padding: var(--spacing-md);
-      text-align: left;
-      font-weight: 600;
-      color: var(--color-text-secondary);
-      border-bottom: 1px solid var(--color-border);
-      white-space: nowrap;
-    }
-
-    td {
-      padding: var(--spacing-md);
-      border-bottom: 1px solid var(--color-border);
-      color: var(--color-text-primary);
-      vertical-align: top;
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    tbody tr {
-      transition: background-color var(--transition-fast);
-    }
-
-    tbody tr:hover {
-      background-color: var(--color-surface-hover);
-    }
-
-    .course-code {
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    .course-title {
-      min-width: 200px;
-    }
-
-    .numeric {
-      text-align: center;
-      white-space: nowrap;
-    }
-
-    .prerequisite {
-      font-size: 0.8125rem;
-      min-width: 150px;
-    }
-
-    .prerequisite.has-prereq {
-      color: #60a5fa;
-      text-shadow: 0 0 8px rgba(96, 165, 250, 0.6), 0 0 16px rgba(96, 165, 250, 0.4);
-    }
-
-    .prerequisite.no-prereq {
-      color: var(--color-text-muted);
-    }
-
-    .total-row {
-      background: var(--color-surface-hover);
-    }
-
-    .total-row td {
-      font-weight: 600;
-      border-bottom: none;
-    }
-
-    footer {
-      margin-top: var(--spacing-2xl);
-      padding-top: var(--spacing-xl);
-      border-top: 1px solid var(--color-border);
-      text-align: center;
-      color: var(--color-text-muted);
-      font-size: 0.8125rem;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: var(--spacing-lg) var(--spacing-md);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSCE Curriculum | Bachelor of Science in Civil Engineering</title>
+    <meta
+      name="description"
+      content="Complete curriculum for Bachelor of Science in Civil Engineering (BSCE) program including all courses, units, and prerequisites." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --color-background: #111111;
+        --color-surface: #1a1a1a;
+        --color-surface-hover: #222222;
+        --color-border: #2a2a2a;
+        --color-text-primary: #eeeeee;
+        --color-text-secondary: #aaaaaa;
+        --color-text-muted: #666666;
+        --color-accent: #888888;
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+        --spacing-2xl: 3rem;
+        --radius-sm: 4px;
+        --radius-md: 6px;
+        --transition-fast: 150ms ease-in-out;
+        --transition-normal: 200ms ease-in-out;
+        --max-width: 1200px;
+        --font-family: "Outfit", system-ui, -apple-system, sans-serif;
       }
 
-      th, td {
-        padding: var(--spacing-sm);
-        font-size: 0.8125rem;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--color-background);
+        color: var(--color-text-primary);
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: var(--spacing-xl) var(--spacing-lg);
+      }
+
+      .year-section {
+        margin-bottom: var(--spacing-2xl);
+      }
+
+      .year-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-text-primary);
+        margin-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-md);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .semester-section {
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .semester-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-md) 0;
+      }
+
+      .semester-header h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--color-text-primary);
+      }
+
+      .semester-content {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
+
+      .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+      }
+
+      thead {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      th {
+        background: var(--color-surface);
+        padding: var(--spacing-md);
+        text-align: left;
+        font-weight: 600;
+        color: var(--color-text-secondary);
+        border-bottom: 1px solid var(--color-border);
+        white-space: nowrap;
+      }
+
+      td {
+        padding: var(--spacing-md);
+        border-bottom: 1px solid var(--color-border);
+        color: var(--color-text-primary);
+        vertical-align: top;
+      }
+
+      tr:last-child td {
+        border-bottom: none;
+      }
+
+      tbody tr {
+        transition: background-color var(--transition-fast);
+      }
+
+      tbody tr:hover {
+        background-color: var(--color-surface-hover);
+      }
+
+      .course-code {
+        font-weight: 600;
+        white-space: nowrap;
       }
 
       .course-title {
-        min-width: 150px;
+        min-width: 200px;
+      }
+
+      .numeric {
+        text-align: center;
+        white-space: nowrap;
       }
 
       .prerequisite {
-        min-width: 100px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .semester-header h3 {
-        font-size: 1rem;
+        font-size: 0.8125rem;
+        min-width: 150px;
       }
 
-      th, td {
-        padding: var(--spacing-xs) var(--spacing-sm);
-        font-size: 0.75rem;
+      .prerequisite.has-prereq {
+        color: #60a5fa;
+        text-shadow:
+          0 0 8px rgba(96, 165, 250, 0.6),
+          0 0 16px rgba(96, 165, 250, 0.4);
       }
-    }
 
-    /* =============================================
+      .prerequisite.no-prereq {
+        color: var(--color-text-muted);
+      }
+
+      .total-row {
+        background: var(--color-surface-hover);
+      }
+
+      .total-row td {
+        font-weight: 600;
+        border-bottom: none;
+      }
+
+      footer {
+        margin-top: var(--spacing-2xl);
+        padding-top: var(--spacing-xl);
+        border-top: 1px solid var(--color-border);
+        text-align: center;
+        color: var(--color-text-muted);
+        font-size: 0.8125rem;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: var(--spacing-lg) var(--spacing-md);
+        }
+
+        th,
+        td {
+          padding: var(--spacing-sm);
+          font-size: 0.8125rem;
+        }
+
+        .course-title {
+          min-width: 150px;
+        }
+
+        .prerequisite {
+          min-width: 100px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .semester-header h3 {
+          font-size: 1rem;
+        }
+
+        th,
+        td {
+          padding: var(--spacing-xs) var(--spacing-sm);
+          font-size: 0.75rem;
+        }
+      }
+
+      /* =============================================
        PREREQUISITE AWARENESS STYLES - START
        ============================================= */
-    
-    /* Foundation courses - courses that ARE prerequisites (other courses depend on them) */
-    .is-foundation .course-code,
-    .is-foundation .course-title {
-      color: #ef4444;
-      text-shadow: 0 0 8px rgba(239, 68, 68, 0.5), 0 0 16px rgba(239, 68, 68, 0.3);
-      cursor: pointer;
-    }
 
-    /* Courses that HAVE prerequisites - blue highlight */
-    .has-prerequisite .course-code,
-    .has-prerequisite .course-title {
-      color: #60a5fa;
-      text-shadow: 0 0 8px rgba(96, 165, 250, 0.5), 0 0 16px rgba(96, 165, 250, 0.3);
-      cursor: pointer;
-    }
-
-    /* Clickable prerequisite text */
-    .prerequisite.has-prereq {
-      cursor: pointer;
-    }
-
-    /* Target row highlight when scrolling DOWN to dependents (blue) */
-    .dependent-target {
-      background-color: rgba(96, 165, 250, 0.25) !important;
-      box-shadow: inset 0 0 0 2px #60a5fa, 0 0 20px rgba(96, 165, 250, 0.4);
-      animation: dependent-fade 3s ease-out forwards;
-    }
-
-    @keyframes dependent-fade {
-      0% {
-        background-color: rgba(96, 165, 250, 0.35);
-        box-shadow: inset 0 0 0 2px #60a5fa, 0 0 25px rgba(96, 165, 250, 0.5);
+      /* Foundation courses - courses that ARE prerequisites (other courses depend on them) */
+      .is-foundation .course-code,
+      .is-foundation .course-title {
+        color: #ef4444;
+        text-shadow:
+          0 0 8px rgba(239, 68, 68, 0.5),
+          0 0 16px rgba(239, 68, 68, 0.3);
+        cursor: pointer;
       }
-      70% {
-        background-color: rgba(96, 165, 250, 0.25);
-        box-shadow: inset 0 0 0 2px #60a5fa, 0 0 20px rgba(96, 165, 250, 0.4);
-      }
-      100% {
-        background-color: transparent;
-        box-shadow: none;
-      }
-    }
 
-    /* Target row highlight when scrolling UP to prerequisites (orange) */
-    .prerequisite-target {
-      background-color: rgba(251, 146, 60, 0.25) !important;
-      box-shadow: inset 0 0 0 2px #fb923c, 0 0 20px rgba(251, 146, 60, 0.4);
-      animation: prerequisite-fade 3s ease-out forwards;
-    }
+      /* Courses that HAVE prerequisites - blue highlight */
+      .has-prerequisite .course-code,
+      .has-prerequisite .course-title {
+        color: #60a5fa;
+        text-shadow:
+          0 0 8px rgba(96, 165, 250, 0.5),
+          0 0 16px rgba(96, 165, 250, 0.3);
+        cursor: pointer;
+      }
 
-    @keyframes prerequisite-fade {
-      0% {
-        background-color: rgba(251, 146, 60, 0.35);
-        box-shadow: inset 0 0 0 2px #fb923c, 0 0 25px rgba(251, 146, 60, 0.5);
+      /* Clickable prerequisite text */
+      .prerequisite.has-prereq {
+        cursor: pointer;
       }
-      70% {
-        background-color: rgba(251, 146, 60, 0.25);
-        box-shadow: inset 0 0 0 2px #fb923c, 0 0 20px rgba(251, 146, 60, 0.4);
-      }
-      100% {
-        background-color: transparent;
-        box-shadow: none;
-      }
-    }
 
-    /* Mobile font size increase for course code and title */
-    @media (max-width: 480px) {
-      .course-code {
+      /* Target row highlight when scrolling DOWN to dependents (blue) */
+      .dependent-target {
+        background-color: rgba(96, 165, 250, 0.25) !important;
+        box-shadow:
+          inset 0 0 0 2px #60a5fa,
+          0 0 20px rgba(96, 165, 250, 0.4);
+        animation: dependent-fade 3s ease-out forwards;
+      }
+
+      @keyframes dependent-fade {
+        0% {
+          background-color: rgba(96, 165, 250, 0.35);
+          box-shadow:
+            inset 0 0 0 2px #60a5fa,
+            0 0 25px rgba(96, 165, 250, 0.5);
+        }
+        70% {
+          background-color: rgba(96, 165, 250, 0.25);
+          box-shadow:
+            inset 0 0 0 2px #60a5fa,
+            0 0 20px rgba(96, 165, 250, 0.4);
+        }
+        100% {
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+
+      /* Target row highlight when scrolling UP to prerequisites (orange) */
+      .prerequisite-target {
+        background-color: rgba(251, 146, 60, 0.25) !important;
+        box-shadow:
+          inset 0 0 0 2px #fb923c,
+          0 0 20px rgba(251, 146, 60, 0.4);
+        animation: prerequisite-fade 3s ease-out forwards;
+      }
+
+      @keyframes prerequisite-fade {
+        0% {
+          background-color: rgba(251, 146, 60, 0.35);
+          box-shadow:
+            inset 0 0 0 2px #fb923c,
+            0 0 25px rgba(251, 146, 60, 0.5);
+        }
+        70% {
+          background-color: rgba(251, 146, 60, 0.25);
+          box-shadow:
+            inset 0 0 0 2px #fb923c,
+            0 0 20px rgba(251, 146, 60, 0.4);
+        }
+        100% {
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+
+      /* Mobile font size increase for course code and title */
+      @media (max-width: 480px) {
+        .course-code {
+          font-size: 0.8125rem;
+        }
+        .course-title {
+          font-size: 0.8125rem;
+        }
+      }
+
+      /* Clickable course code/title hint */
+      .is-foundation .course-code,
+      .is-foundation .course-title,
+      .has-prerequisite .course-code,
+      .has-prerequisite .course-title {
+        cursor: pointer;
+      }
+
+      .is-foundation .course-code:hover,
+      .is-foundation .course-title:hover,
+      .has-prerequisite .course-code:hover,
+      .has-prerequisite .course-title:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      /* Modal Overlay */
+      .chain-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(4px);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-lg);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease;
+      }
+
+      .chain-modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .chain-modal {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        max-width: 900px;
+        width: 100%;
+        max-height: 85vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transform: scale(0.95);
+        transition: transform 0.3s ease;
+      }
+
+      .chain-modal-overlay.active .chain-modal {
+        transform: scale(1);
+      }
+
+      .chain-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .chain-modal-header h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--color-text-primary);
+        margin: 0;
+      }
+
+      .chain-modal-close {
+        background: transparent;
+        border: none;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        padding: 8px;
+        border-radius: var(--radius-sm);
+        transition: all var(--transition-fast);
+      }
+
+      .chain-modal-close:hover {
+        background: var(--color-surface-hover);
+        color: var(--color-text-primary);
+      }
+
+      .chain-modal-body {
+        flex: 1;
+        overflow: auto;
+        padding: var(--spacing-lg);
+      }
+
+      /* Chain Graph Container */
+      .chain-graph-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+        min-height: 300px;
+      }
+
+      /* Legend */
+      .chain-legend {
+        display: flex;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-sm) var(--spacing-md);
+        background: var(--color-background);
+        border-radius: var(--radius-sm);
+        font-size: 0.75rem;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--color-text-secondary);
+      }
+
+      .legend-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+
+      .legend-dot.prereq {
+        background: #fb923c;
+      }
+
+      .legend-dot.selected {
+        background: #22c55e;
+      }
+
+      .legend-dot.dependent {
+        background: #60a5fa;
+      }
+
+      /* Chain Section */
+      .chain-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-xs);
+        width: 100%;
+      }
+
+      .chain-section-label {
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--color-text-muted);
+        margin-bottom: var(--spacing-xs);
+      }
+
+      .chain-level {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        width: 100%;
+      }
+
+      .chain-connector {
+        width: 2px;
+        height: 20px;
+        background: var(--color-border);
+      }
+
+      .chain-node {
+        padding: 8px 14px;
+        border-radius: var(--radius-sm);
         font-size: 0.8125rem;
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+        min-width: 100px;
+        border: 2px solid transparent;
       }
-      .course-title {
+
+      .chain-node.prereq {
+        background: rgba(251, 146, 60, 0.2);
+        color: #fb923c;
+        border-color: #fb923c;
+      }
+
+      .chain-node.selected {
+        background: rgba(34, 197, 94, 0.2);
+        color: #22c55e;
+        border-color: #22c55e;
+        transform: scale(1.05);
+      }
+
+      .chain-node.dependent {
+        background: rgba(96, 165, 250, 0.2);
+        color: #60a5fa;
+        border-color: #60a5fa;
+      }
+
+      .chain-node:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .chain-node-title {
+        font-size: 0.6875rem;
+        color: var(--color-text-muted);
+        margin-top: 4px;
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .chain-empty {
+        color: var(--color-text-muted);
         font-size: 0.8125rem;
+        font-style: italic;
+        padding: var(--spacing-md);
       }
-    }
 
-    /* Clickable course code/title hint */
-    .is-foundation .course-code,
-    .is-foundation .course-title,
-    .has-prerequisite .course-code,
-    .has-prerequisite .course-title {
-      cursor: pointer;
-    }
+      /* Arrow connectors */
+      .chain-arrow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--color-text-muted);
+      }
 
-    .is-foundation .course-code:hover,
-    .is-foundation .course-title:hover,
-    .has-prerequisite .course-code:hover,
-    .has-prerequisite .course-title:hover {
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
+      .chain-arrow svg {
+        width: 20px;
+        height: 20px;
+      }
 
-    /* Modal Overlay */
-    .chain-modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(4px);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: var(--spacing-lg);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
+      .chain-arrow.up svg {
+        color: #fb923c;
+      }
 
-    .chain-modal-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
+      .chain-arrow.down svg {
+        color: #60a5fa;
+      }
 
-    .chain-modal {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      max-width: 900px;
-      width: 100%;
-      max-height: 85vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transform: scale(0.95);
-      transition: transform 0.3s ease;
-    }
-
-    .chain-modal-overlay.active .chain-modal {
-      transform: scale(1);
-    }
-
-    .chain-modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: var(--spacing-md) var(--spacing-lg);
-      border-bottom: 1px solid var(--color-border);
-    }
-
-    .chain-modal-header h3 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin: 0;
-    }
-
-    .chain-modal-close {
-      background: transparent;
-      border: none;
-      color: var(--color-text-muted);
-      cursor: pointer;
-      padding: 8px;
-      border-radius: var(--radius-sm);
-      transition: all var(--transition-fast);
-    }
-
-    .chain-modal-close:hover {
-      background: var(--color-surface-hover);
-      color: var(--color-text-primary);
-    }
-
-    .chain-modal-body {
-      flex: 1;
-      overflow: auto;
-      padding: var(--spacing-lg);
-    }
-
-    /* Chain Graph Container */
-    .chain-graph-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--spacing-md);
-      min-height: 300px;
-    }
-
-    /* Legend */
-    .chain-legend {
-      display: flex;
-      gap: var(--spacing-lg);
-      padding: var(--spacing-sm) var(--spacing-md);
-      background: var(--color-background);
-      border-radius: var(--radius-sm);
-      font-size: 0.75rem;
-      margin-bottom: var(--spacing-md);
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--color-text-secondary);
-    }
-
-    .legend-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    .legend-dot.prereq {
-      background: #fb923c;
-    }
-
-    .legend-dot.selected {
-      background: #22c55e;
-    }
-
-    .legend-dot.dependent {
-      background: #60a5fa;
-    }
-
-    /* Chain Section */
-    .chain-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--spacing-xs);
-      width: 100%;
-    }
-
-    .chain-section-label {
-      font-size: 0.6875rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--color-text-muted);
-      margin-bottom: var(--spacing-xs);
-    }
-
-    .chain-level {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: var(--spacing-sm);
-      width: 100%;
-    }
-
-    .chain-connector {
-      width: 2px;
-      height: 20px;
-      background: var(--color-border);
-    }
-
-    .chain-node {
-      padding: 8px 14px;
-      border-radius: var(--radius-sm);
-      font-size: 0.8125rem;
-      font-weight: 500;
-      text-align: center;
-      cursor: pointer;
-      transition: all var(--transition-fast);
-      min-width: 100px;
-      border: 2px solid transparent;
-    }
-
-    .chain-node.prereq {
-      background: rgba(251, 146, 60, 0.2);
-      color: #fb923c;
-      border-color: #fb923c;
-    }
-
-    .chain-node.selected {
-      background: rgba(34, 197, 94, 0.2);
-      color: #22c55e;
-      border-color: #22c55e;
-      transform: scale(1.05);
-    }
-
-    .chain-node.dependent {
-      background: rgba(96, 165, 250, 0.2);
-      color: #60a5fa;
-      border-color: #60a5fa;
-    }
-
-    .chain-node:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .chain-node-title {
-      font-size: 0.6875rem;
-      color: var(--color-text-muted);
-      margin-top: 4px;
-      max-width: 150px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .chain-empty {
-      color: var(--color-text-muted);
-      font-size: 0.8125rem;
-      font-style: italic;
-      padding: var(--spacing-md);
-    }
-
-    /* Arrow connectors */
-    .chain-arrow {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: var(--color-text-muted);
-    }
-
-    .chain-arrow svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .chain-arrow.up svg {
-      color: #fb923c;
-    }
-
-    .chain-arrow.down svg {
-      color: #60a5fa;
-    }
-
-    /* =============================================
+      /* =============================================
        PREREQUISITE AWARENESS STYLES - END
        ============================================= */
-  </style>
-</head>
-<body>
-  <div class="container">
 
-    <main>
-      <!-- FIRST YEAR -->
-      <div class="year-section">
-        <h2 class="year-title">First Year</h2>
-        
-        <!-- First Semester -->
-        <section class="semester-section">
-          <div class="semester-header">
-            <h3>First Semester</h3>
-          </div>
-          <div class="semester-content">
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Descriptive Title</th>
-                    <th class="numeric">Lec</th>
-                    <th class="numeric">Lab</th>
-                    <th class="numeric">Units</th>
-                    <th>Pre-requisite / Co-requisite</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-course-code="MATH 111">
-                    <td class="course-code">MATH 111</td>
-                    <td class="course-title">Differential Calculus</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="CHEM LEC 111">
-                    <td class="course-code">CHEM LEC 111</td>
-                    <td class="course-title">Chemistry for Engineers (Lecture)</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="CHEM LAB 111">
-                    <td class="course-code">CHEM LAB 111</td>
-                    <td class="course-title">Chemistry for Engineers (Laboratory)</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">1</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="DRAW 111">
-                    <td class="course-code">DRAW 111</td>
-                    <td class="course-title">Engineering Drawing and Plans</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">1</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="CE 111">
-                    <td class="course-code">CE 111</td>
-                    <td class="course-title">Civil Engineering Orientation</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GE 101">
-                    <td class="course-code">GE 101</td>
-                    <td class="course-title">Understanding the Self / Pag-unawa sa Sarili</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GE 102">
-                    <td class="course-code">GE 102</td>
-                    <td class="course-title">The Contemporary World / Ang Kasalukuyang Daigdig</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GE 102">
-                    <td class="course-code">GE 102</td>
-                    <td class="course-title">Gender and Society</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="PE 109">
-                    <td class="course-code">PE 109</td>
-                    <td class="course-title">PATHFIT 1</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="NSTP 101">
-                    <td class="course-code">NSTP 101</td>
-                    <td class="course-title">ROTC / CWTS / LTS</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="2">Total</td>
-                    <td class="numeric">22</td>
-                    <td class="numeric">6</td>
-                    <td class="numeric">24</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+      /* =============================================
+       HEADER & SEARCH STYLES
+       ============================================= */
+      .sticky-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(17, 17, 17, 0.85);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--color-border);
+        padding: var(--spacing-sm) 0;
+      }
 
-        <!-- Second Semester -->
-        <section class="semester-section">
-          <div class="semester-header">
-            <h3>Second Semester</h3>
-          </div>
-          <div class="semester-content">
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Descriptive Title</th>
-                    <th class="numeric">Lec</th>
-                    <th class="numeric">Lab</th>
-                    <th class="numeric">Units</th>
-                    <th>Pre-requisite / Co-requisite</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-course-code="MATH 122" data-prerequisites="MATH 111">
-                    <td class="course-code">MATH 122</td>
-                    <td class="course-title">Integral Calculus</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">MATH 111</td>
-                  </tr>
-                  <tr data-course-code="PHYS 121" data-prerequisites="MATH 111">
-                    <td class="course-code">PHYS 121</td>
-                    <td class="course-title">Physics for Engineers</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">4</td>
-                    <td class="prerequisite has-prereq">MATH 111</td>
-                  </tr>
-                  <tr data-course-code="COMP 121">
-                    <td class="course-code">COMP 121</td>
-                    <td class="course-title">Computer Fundamentals and Programming</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">6</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GE 103">
-                    <td class="course-code">GE 103</td>
-                    <td class="course-title">Arts Appreciation / Pagpapahalaga sa Sining</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GE 104">
-                    <td class="course-code">GE 104</td>
-                    <td class="course-title">Mathematics in the Modern World / Matematika sa Makabagong Daigdig</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GE 105">
-                    <td class="course-code">GE 105</td>
-                    <td class="course-title">Living in the IT Era</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="PE 110">
-                    <td class="course-code">PE 110</td>
-                    <td class="course-title">PATHFIT 2</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="NSTP 102">
-                    <td class="course-code">NSTP 102</td>
-                    <td class="course-title">ROTC / CWTS / LTS</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="2">Total</td>
-                    <td class="numeric">20</td>
-                    <td class="numeric">9</td>
-                    <td class="numeric">23</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-      </div>
+      .header-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing-lg);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacing-md);
+      }
 
-      <!-- SECOND YEAR -->
-      <div class="year-section">
-        <h2 class="year-title">Second Year</h2>
-        
-        <!-- First Semester -->
-        <section class="semester-section">
-          <div class="semester-header">
-            <h3>First Semester</h3>
-          </div>
-          <div class="semester-content">
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Descriptive Title</th>
-                    <th class="numeric">Lec</th>
-                    <th class="numeric">Lab</th>
-                    <th class="numeric">Units</th>
-                    <th>Pre-requisite / Co-requisite</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-course-code="MATH 213" data-prerequisites="MATH 122">
-                    <td class="course-code">MATH 213</td>
-                    <td class="course-title">Differential Equations</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">MATH 122</td>
-                  </tr>
-                  <tr data-course-code="MECH 211" data-prerequisites="MATH 122,PHYS 121">
-                    <td class="course-code">MECH 211</td>
-                    <td class="course-title">Statics of Rigid Bodies</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">MATH 122, PHYS 121</td>
-                  </tr>
-                  <tr data-course-code="SURV 211" data-prerequisites="DRAW 111">
-                    <td class="course-code">SURV 211</td>
-                    <td class="course-title">Fundamentals of Surveying</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">4</td>
-                    <td class="prerequisite has-prereq">DRAW 111</td>
-                  </tr>
-                  <tr data-course-code="ECON 211">
-                    <td class="course-code">ECON 211</td>
-                    <td class="course-title">Engineering Economics</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="MNGT 211">
-                    <td class="course-code">MNGT 211</td>
-                    <td class="course-title">Engineering Management</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite has-prereq">2nd year standing</td>
-                  </tr>
-                  <tr data-course-code="CAD 211" data-prerequisites="DRAW 111">
-                    <td class="course-code">CAD 211</td>
-                    <td class="course-title">Computer-Aided Drafting</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">1</td>
-                    <td class="prerequisite has-prereq">DRAW 111</td>
-                  </tr>
-                  <tr data-course-code="GE 106">
-                    <td class="course-code">GE 106</td>
-                    <td class="course-title">Purposive Communication / Malayuning Komunikasyon</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GE 107">
-                    <td class="course-code">GE 107</td>
-                    <td class="course-title">Ethics / Etika</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="PE 111">
-                    <td class="course-code">PE 111</td>
-                    <td class="course-title">PATHFIT 3</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="2">Total</td>
-                    <td class="numeric">22</td>
-                    <td class="numeric">6</td>
-                    <td class="numeric">24</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+      .search-wrapper {
+        position: relative;
+        flex: 1;
+        max-width: 400px;
+      }
 
-        <!-- Second Semester -->
-        <section class="semester-section">
-          <div class="semester-header">
-            <h3>Second Semester</h3>
-          </div>
-          <div class="semester-content">
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Descriptive Title</th>
-                    <th class="numeric">Lec</th>
-                    <th class="numeric">Lab</th>
-                    <th class="numeric">Units</th>
-                    <th>Pre-requisite / Co-requisite</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-course-code="MATH 224" data-prerequisites="MATH 122">
-                    <td class="course-code">MATH 224</td>
-                    <td class="course-title">Engineering Data Analysis</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">MATH 122</td>
-                  </tr>
-                  <tr data-course-code="MECH 222" data-prerequisites="MECH 211">
-                    <td class="course-code">MECH 222</td>
-                    <td class="course-title">Dynamics of Rigid Bodies</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite has-prereq">MECH 211</td>
-                  </tr>
-                  <tr data-course-code="CE 221" data-prerequisites="CHEM LEC 111,MECH 211">
-                    <td class="course-code">CE 221</td>
-                    <td class="course-title">Mechanics of Deformable Bodies</td>
-                    <td class="numeric">4</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">4</td>
-                    <td class="prerequisite has-prereq">CHEM LEC 111 / MECH 211</td>
-                  </tr>
-                  <tr data-course-code="CE 223" data-prerequisites="CE 221">
-                    <td class="course-code">CE 223</td>
-                    <td class="course-title">Construction Materials and Testing</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">CO-REQ CE 221</td>
-                  </tr>
-                  <tr data-course-code="CE 222">
-                    <td class="course-code">CE 222</td>
-                    <td class="course-title">Geology for Engineers</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GE 108">
-                    <td class="course-code">GE 108</td>
-                    <td class="course-title">Science, Technology and Society</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GE 109">
-                    <td class="course-code">GE 109</td>
-                    <td class="course-title">Readings in Philippine History</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="GEM 101">
-                    <td class="course-code">GEM 101</td>
-                    <td class="course-title">Life and Works of Rizal</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr data-course-code="PE 112">
-                    <td class="course-code">PE 112</td>
-                    <td class="course-title">PATHFIT 4</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="2">Total</td>
-                    <td class="numeric">24</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">25</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-      </div>
+      .search-wrapper svg {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        color: var(--color-text-muted);
+        pointer-events: none;
+      }
 
-      <!-- THIRD YEAR -->
-      <div class="year-section">
-        <h2 class="year-title">Third Year</h2>
-        
-        <!-- First Semester -->
-        <section class="semester-section">
-          <div class="semester-header">
-            <h3>First Semester</h3>
-          </div>
-          <div class="semester-content">
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Descriptive Title</th>
-                    <th class="numeric">Lec</th>
-                    <th class="numeric">Lab</th>
-                    <th class="numeric">Units</th>
-                    <th>Pre-requisite / Co-requisite</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-course-code="TECHNO 101">
-                    <td class="course-code">TECHNO 101</td>
-                    <td class="course-title">Technopreneurship 101</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">3rd year standing</td>
-                  </tr>
-                  <tr data-course-code="CE 311" data-prerequisites="CE 221">
-                    <td class="course-code">CE 311</td>
-                    <td class="course-title">Structural Theory</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">4</td>
-                    <td class="prerequisite has-prereq">CE 221</td>
-                  </tr>
-                  <tr data-course-code="CE 312" data-prerequisites="SURV 211">
-                    <td class="course-code">CE 312</td>
-                    <td class="course-title">Highway and Railroad Engineering</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">SURV 211</td>
-                  </tr>
-                  <tr data-course-code="CE 313" data-prerequisites="PHYS 211">
-                    <td class="course-code">CE 313</td>
-                    <td class="course-title">Engineering Utilities 1</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">PHYS 211</td>
-                  </tr>
-                  <tr data-course-code="CE 314" data-prerequisites="PHYS 211">
-                    <td class="course-code">CE 314</td>
-                    <td class="course-title">Engineering Utilities 2</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">PHYS 211</td>
-                  </tr>
-                  <tr data-course-code="CE 315" data-prerequisites="MATH 213">
-                    <td class="course-code">CE 315</td>
-                    <td class="course-title">Numerical Solutions to CE Problems</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">MATH 213</td>
-                  </tr>
-                  <tr data-course-code="GEE 108">
-                    <td class="course-code">GEE 108</td>
-                    <td class="course-title">Environmental Science</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite no-prereq">—</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="2">Total</td>
-                    <td class="numeric">20</td>
-                    <td class="numeric">6</td>
-                    <td class="numeric">22</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+      .search-wrapper input {
+        width: 100%;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 50px;
+        padding: 8px 12px 8px 36px;
+        color: var(--color-text-primary);
+        font-family: var(--font-family);
+        font-size: 0.875rem;
+        transition: all var(--transition-fast);
+      }
 
-        <!-- Second Semester -->
-        <section class="semester-section">
-          <div class="semester-header">
-            <h3>Second Semester</h3>
-          </div>
-          <div class="semester-content">
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Descriptive Title</th>
-                    <th class="numeric">Lec</th>
-                    <th class="numeric">Lab</th>
-                    <th class="numeric">Units</th>
-                    <th>Pre-requisite / Co-requisite</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-course-code="CE 322" data-prerequisites="DRAW 111">
-                    <td class="course-code">CE 322</td>
-                    <td class="course-title">Building System Design</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">DRAW 111</td>
-                  </tr>
-                  <tr data-course-code="CE 323">
-                    <td class="course-code">CE 323</td>
-                    <td class="course-title">CE Laws, Ethics and Standards</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite has-prereq">3rd year standing</td>
-                  </tr>
-                  <tr data-course-code="CE 324">
-                    <td class="course-code">CE 324</td>
-                    <td class="course-title">Hydrology</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite has-prereq">3rd year standing</td>
-                  </tr>
-                  <tr data-course-code="CE 325">
-                    <td class="course-code">CE 325</td>
-                    <td class="course-title">Hydraulics</td>
-                    <td class="numeric">4</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">5</td>
-                    <td class="prerequisite has-prereq">3rd year standing</td>
-                  </tr>
-                  <tr data-course-code="CE 326" data-prerequisites="CE 311">
-                    <td class="course-code">CE 326</td>
-                    <td class="course-title">Principles of Steel Design</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">CE 311</td>
-                  </tr>
-                  <tr data-course-code="CE 327" data-prerequisites="CE 311">
-                    <td class="course-code">CE 327</td>
-                    <td class="course-title">Principles of Reinforced / Pre-stressed Concrete</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">4</td>
-                    <td class="prerequisite has-prereq">CE 311</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="2">Total</td>
-                    <td class="numeric">15</td>
-                    <td class="numeric">12</td>
-                    <td class="numeric">19</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+      .search-wrapper input:focus {
+        outline: none;
+        border-color: #666;
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
+      }
 
-        <!-- Summer -->
-        <section class="semester-section">
-          <div class="semester-header">
-            <h3>Summer</h3>
-          </div>
-          <div class="semester-content">
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Descriptive Title</th>
-                    <th class="numeric">Lec</th>
-                    <th class="numeric">Lab</th>
-                    <th class="numeric">Units</th>
-                    <th>Pre-requisite / Co-requisite</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-course-code="OJT">
-                    <td class="course-code">OJT</td>
-                    <td class="course-title">On-the-Job Training (240 hrs)</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">3rd year standing</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="2">Total</td>
-                    <td class="numeric">2</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-      </div>
+      .gwa-display {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        min-width: 120px;
+      }
 
-      <!-- FOURTH YEAR -->
-      <div class="year-section">
-        <h2 class="year-title">Fourth Year</h2>
-        
-        <!-- First Semester -->
-        <section class="semester-section">
-          <div class="semester-header">
-            <h3>First Semester</h3>
-          </div>
-          <div class="semester-content">
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Descriptive Title</th>
-                    <th class="numeric">Lec</th>
-                    <th class="numeric">Lab</th>
-                    <th class="numeric">Units</th>
-                    <th>Pre-requisite / Co-requisite</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-course-code="CE 411" class="has-prerequisite" data-prerequisites="CE 221">
-                    <td class="course-code">CE 411</td>
-                    <td class="course-title">Geotechnical Engineering – Soil Mechanics</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">4</td>
-                    <td class="prerequisite has-prereq">CE 221</td>
-                  </tr>
-                  <tr data-course-code="CE 412" class="has-prerequisite" data-prerequisites="CE 312">
-                    <td class="course-code">CE 412</td>
-                    <td class="course-title">Principles of Transportation Engineering</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">CE 312</td>
-                  </tr>
-                  <tr data-course-code="CE 413">
-                    <td class="course-code">CE 413</td>
-                    <td class="course-title">CE Project 1 with Fieldtrip</td>
-                    <td class="numeric">1</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite has-prereq">4th year standing</td>
-                  </tr>
-                  <tr data-course-code="CE 414" class="has-prerequisite" data-prerequisites="CE 322">
-                    <td class="course-code">CE 414</td>
-                    <td class="course-title">Quantity Surveying</td>
-                    <td class="numeric">1</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite has-prereq">CE 322</td>
-                  </tr>
-                  <tr data-course-code="PC 411">
-                    <td class="course-code">PC 411</td>
-                    <td class="course-title">Specialization 1 – Reinforced Concrete Design</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">4th year standing</td>
-                  </tr>
-                  <tr data-course-code="PC 412">
-                    <td class="course-code">PC 412</td>
-                    <td class="course-title">Specialization 2 – Design of Steel Structures</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">4th year standing</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="2">Total</td>
-                    <td class="numeric">14</td>
-                    <td class="numeric">9</td>
-                    <td class="numeric">17</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+      .gwa-label {
+        font-size: 0.625rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--color-text-muted);
+        font-weight: 600;
+      }
 
-        <!-- Second Semester -->
-        <section class="semester-section">
-          <div class="semester-header">
-            <h3>Second Semester</h3>
-          </div>
-          <div class="semester-content">
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Course Code</th>
-                    <th>Descriptive Title</th>
-                    <th class="numeric">Lec</th>
-                    <th class="numeric">Lab</th>
-                    <th class="numeric">Units</th>
-                    <th>Pre-requisite / Co-requisite</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr data-course-code="CE 421">
-                    <td class="course-code">CE 421</td>
-                    <td class="course-title">CE Project 2</td>
-                    <td class="numeric">1</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">2</td>
-                    <td class="prerequisite has-prereq">4th year standing</td>
-                  </tr>
-                  <tr data-course-code="CE 422">
-                    <td class="course-code">CE 422</td>
-                    <td class="course-title">Construction Methods & Project Management</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">4th year standing</td>
-                  </tr>
-                  <tr data-course-code="PC 421">
-                    <td class="course-code">PC 421</td>
-                    <td class="course-title">Specialization 3 – Pre-stressed Concrete Design</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">4th year standing</td>
-                  </tr>
-                  <tr data-course-code="PC 422">
-                    <td class="course-code">PC 422</td>
-                    <td class="course-title">Specialization 4 – Foundation & Retaining Wall Design</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">4th year standing</td>
-                  </tr>
-                  <tr data-course-code="PC 423" class="has-prerequisite" data-prerequisites="CE 311">
-                    <td class="course-code">PC 423</td>
-                    <td class="course-title">Specialization 5 – Earthquake Engineering</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">0</td>
-                    <td class="numeric">3</td>
-                    <td class="prerequisite has-prereq">CE 311</td>
-                  </tr>
-                  <tr class="total-row">
-                    <td colspan="2">Total</td>
-                    <td class="numeric">13</td>
-                    <td class="numeric">3</td>
-                    <td class="numeric">14</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-      </div>
+      .gwa-value {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: #22c55e;
+        line-height: 1;
+        margin: 2px 0;
+      }
 
-    </main>
+      .gwa-count {
+        font-size: 0.625rem;
+        color: var(--color-text-muted);
+      }
 
-    <footer>
-      <p>BSCE Curriculum</p>
-    </footer>
+      @media (max-width: 768px) {
+        .header-container {
+          padding: 0 var(--spacing-md);
+        }
+        .search-wrapper {
+          max-width: none;
+        }
+        .gwa-display {
+          min-width: auto;
+        }
+        .gwa-value {
+          font-size: 1rem;
+        }
+      }
 
-    <!-- Dependency Chain Modal -->
-    <div class="chain-modal-overlay" id="chainModalOverlay">
-      <div class="chain-modal">
-        <div class="chain-modal-header">
-          <h3 id="chainModalTitle">Dependency Chain</h3>
-          <button class="chain-modal-close" id="chainModalClose" aria-label="Close modal">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
+      /* Search highlight and hide styles */
+      .course-hidden {
+        display: none !important;
+      }
+
+      .semester-hidden {
+        display: none !important;
+      }
+
+      .year-hidden {
+        display: none !important;
+      }
+
+      mark {
+        background: rgba(250, 204, 21, 0.3);
+        color: inherit;
+        padding: 0 1px;
+        border-radius: 2px;
+      }
+
+      /* =============================================
+       HEADER & SEARCH STYLES END
+       ============================================= */
+
+      /* =============================================
+       DEVELOPER MODAL STYLES
+       ============================================= */
+      footer .dev-credit {
+        margin-top: var(--spacing-xs);
+        font-size: 0.75rem;
+      }
+      footer .dev-credit a {
+        color: #60a5fa;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color var(--transition-fast);
+      }
+      footer .dev-credit a:hover {
+        color: #93c5fd;
+        text-decoration: underline;
+      }
+
+      .dev-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        z-index: 4000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-lg);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .dev-modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .dev-modal {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        max-width: 340px;
+        width: 100%;
+        padding: var(--spacing-xl);
+        position: relative;
+        transform: scale(0.9) translateY(20px);
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        text-align: center;
+      }
+
+      .dev-modal-overlay.active .dev-modal {
+        transform: scale(1) translateY(0);
+      }
+
+      .dev-modal-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: transparent;
+        border: none;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        padding: 4px;
+        line-height: 1;
+        font-size: 1.25rem;
+        transition: color var(--transition-fast);
+      }
+
+      .dev-modal-close:hover {
+        color: var(--color-text-primary);
+      }
+
+      .dev-avatar {
+        width: 64px;
+        height: 64px;
+        background: linear-gradient(135deg, #1e293b, #334155);
+        border: 2px solid #60a5fa;
+        border-radius: 50%;
+        margin: 0 auto var(--spacing-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #60a5fa;
+        box-shadow: 0 0 20px rgba(96, 165, 250, 0.2);
+      }
+
+      .dev-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: var(--color-text-primary);
+      }
+
+      .dev-role {
+        font-size: 0.8125rem;
+        color: var(--color-text-muted);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .dev-social-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px;
+        border-radius: var(--radius-sm);
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 600;
+        transition: all var(--transition-fast);
+        color: white;
+      }
+
+      .social-link:active {
+        transform: scale(0.97);
+      }
+
+      .social-link.messenger {
+        background: #0084ff;
+      }
+      .social-link.messenger:hover {
+        background: #0073e6;
+        box-shadow: 0 4px 12px rgba(0, 132, 255, 0.3);
+      }
+
+      .social-link.telegram {
+        background: #0088cc;
+      }
+      .social-link.telegram:hover {
+        background: #0077b3;
+        box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+      }
+
+      .social-link svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      /* =============================================
+       DEVELOPER MODAL STYLES END
+       ============================================= */
+
+      /* =============================================
+       GRADE TRACKER - STYLES
+       ============================================= */
+
+      /* Grade column — always shown */
+      .grade-col-header,
+      .grade-col-cell {
+        display: table-cell;
+      }
+
+      .grade-col-header {
+        text-align: center;
+        white-space: nowrap;
+        color: var(--color-text-secondary);
+        font-weight: 600;
+        padding: var(--spacing-md);
+      }
+
+      .grade-col-cell {
+        text-align: center;
+        vertical-align: middle;
+        padding: var(--spacing-sm);
+      }
+
+      .grade-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 54px;
+        height: 28px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        border: 1.5px solid var(--color-border);
+        background: transparent;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        transition: all 140ms ease;
+        white-space: nowrap;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .grade-pill:active {
+        transform: scale(0.94);
+      }
+
+      @media (max-width: 768px) {
+        .grade-col-header {
+          padding: var(--spacing-sm);
+        }
+
+        .grade-col-cell {
+          padding: 6px 4px;
+        }
+      }
+
+      /* Grade color classes */
+      .grade-pill.g-excellent {
+        background: rgba(34, 197, 94, 0.15);
+        border-color: #22c55e;
+        color: #22c55e;
+      }
+      .grade-pill.g-good {
+        background: rgba(132, 204, 22, 0.15);
+        border-color: #84cc16;
+        color: #84cc16;
+      }
+      .grade-pill.g-average {
+        background: rgba(250, 204, 21, 0.15);
+        border-color: #facc15;
+        color: #facc15;
+      }
+      .grade-pill.g-passing {
+        background: rgba(251, 146, 60, 0.15);
+        border-color: #fb923c;
+        color: #fb923c;
+      }
+      .grade-pill.g-failed {
+        background: rgba(239, 68, 68, 0.15);
+        border-color: #ef4444;
+        color: #ef4444;
+      }
+
+      /* Row tint when graded */
+      tbody tr.graded-excellent {
+        background-color: rgba(34, 197, 94, 0.04) !important;
+      }
+      tbody tr.graded-good {
+        background-color: rgba(132, 204, 22, 0.04) !important;
+      }
+      tbody tr.graded-average {
+        background-color: rgba(250, 204, 21, 0.04) !important;
+      }
+      tbody tr.graded-passing {
+        background-color: rgba(251, 146, 60, 0.05) !important;
+      }
+      tbody tr.graded-failed {
+        background-color: rgba(239, 68, 68, 0.06) !important;
+      }
+
+      /* ---- Grade Input Sheet (bottom drawer) ---- */
+      .grade-sheet-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+        z-index: 2000;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 200ms ease, visibility 200ms ease;
+      }
+
+      .grade-sheet-overlay.open {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .grade-sheet {
+        background: #1c1c1c;
+        border: 1px solid #2e2e2e;
+        border-bottom: none;
+        border-radius: 18px 18px 0 0;
+        width: 100%;
+        max-width: 520px;
+        padding: 0 0 env(safe-area-inset-bottom, 16px) 0;
+        transform: translateY(100%);
+        transition: transform 280ms cubic-bezier(0.32, 0.72, 0, 1);
+      }
+
+      .grade-sheet-overlay.open .grade-sheet {
+        transform: translateY(0);
+      }
+
+      @media (min-width: 769px) {
+        .grade-sheet-overlay {
+          align-items: center;
+        }
+        .grade-sheet {
+          border-radius: 18px;
+          border-bottom: 1px solid #2e2e2e;
+          transform: translateY(20px);
+          max-width: 400px;
+        }
+        .grade-sheet-overlay.open .grade-sheet {
+          transform: translateY(0);
+        }
+        .grade-sheet-handle {
+          display: none;
+        }
+      }
+
+      .grade-sheet-handle {
+        display: flex;
+        justify-content: center;
+        padding: 12px 0 6px;
+      }
+
+      .grade-sheet-handle span {
+        width: 36px;
+        height: 4px;
+        border-radius: 2px;
+        background: #444;
+      }
+
+      .grade-sheet-header {
+        padding: 4px 20px 12px;
+      }
+
+      .grade-sheet-course-code {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        margin-bottom: 2px;
+      }
+
+      .grade-sheet-course-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--color-text-primary);
+        line-height: 1.3;
+      }
+
+      .grade-sheet-divider {
+        height: 1px;
+        background: #2a2a2a;
+        margin: 0 20px 16px;
+      }
+
+      .grade-options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        padding: 0 16px 8px;
+      }
+
+      .grade-option-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        padding: 12px 6px;
+        border-radius: 12px;
+        border: 1.5px solid #2e2e2e;
+        background: #222;
+        cursor: pointer;
+        transition: all 150ms ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .grade-option-btn:active {
+        transform: scale(0.95);
+      }
+
+      .grade-option-btn.selected {
+        border-color: currentColor;
+      }
+
+      .grade-option-value {
+        font-size: 1.05rem;
+        font-weight: 700;
+        font-family: "Outfit", monospace;
+      }
+
+      .grade-option-label {
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--color-text-muted);
+      }
+
+      /* Grade color themes for option buttons */
+      .grade-option-btn[data-grade="1.00"] {
+        --gc: #22c55e;
+      }
+      .grade-option-btn[data-grade="1.25"] {
+        --gc: #22c55e;
+      }
+      .grade-option-btn[data-grade="1.50"] {
+        --gc: #4ade80;
+      }
+      .grade-option-btn[data-grade="1.75"] {
+        --gc: #84cc16;
+      }
+      .grade-option-btn[data-grade="2.00"] {
+        --gc: #a3e635;
+      }
+      .grade-option-btn[data-grade="2.25"] {
+        --gc: #facc15;
+      }
+      .grade-option-btn[data-grade="2.50"] {
+        --gc: #facc15;
+      }
+      .grade-option-btn[data-grade="2.75"] {
+        --gc: #fb923c;
+      }
+      .grade-option-btn[data-grade="3.00"] {
+        --gc: #f97316;
+      }
+      .grade-option-btn[data-grade="5.00"] {
+        --gc: #ef4444;
+      }
+
+      .grade-option-btn.selected {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--gc);
+      }
+
+      .grade-option-btn .grade-option-value {
+        color: var(--gc);
+      }
+
+      .grade-sheet-actions {
+        display: flex;
+        gap: 10px;
+        padding: 12px 16px 16px;
+      }
+
+      .gs-btn {
+        flex: 1;
+        height: 44px;
+        border-radius: 10px;
+        border: none;
+        font-family: var(--font-family);
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 140ms ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .gs-btn:active {
+        transform: scale(0.96);
+      }
+
+      .gs-btn-cancel {
+        background: #2a2a2a;
+        color: var(--color-text-secondary);
+      }
+
+      .gs-btn-save {
+        background: #eeeeee;
+        color: #111;
+      }
+
+      .gs-btn-clear {
+        background: rgba(239, 68, 68, 0.15);
+        color: #ef4444;
+        flex: 0 0 auto;
+        width: 80px;
+      }
+
+      /* ---- Floating Export Button (mobile only) ---- */
+      .export-fab {
+        display: none;
+        position: fixed;
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+        right: 16px;
+        z-index: 900;
+        background: #eeeeee;
+        color: #111;
+        border: none;
+        border-radius: 50px;
+        padding: 0 18px;
+        height: 46px;
+        font-family: var(--font-family);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        cursor: pointer;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        align-items: center;
+        gap: 7px;
+        transition:
+          transform 140ms ease,
+          box-shadow 140ms ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      @media (max-width: 768px) {
+        .export-fab {
+          display: flex;
+        }
+      }
+
+      .export-fab:active {
+        transform: scale(0.94);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .export-fab svg {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+      }
+
+      /* Export menu */
+      .export-menu {
+        display: none;
+        position: fixed;
+        bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+        right: 16px;
+        z-index: 901;
+        background: #1e1e1e;
+        border: 1px solid #333;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        min-width: 180px;
+      }
+
+      .export-menu.open {
+        display: block;
+        animation: menuIn 160ms ease forwards;
+      }
+
+      @keyframes menuIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px) scale(0.97);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      .export-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 16px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--color-text-primary);
+        cursor: pointer;
+        transition: background 100ms;
+        -webkit-tap-highlight-color: transparent;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        font-family: var(--font-family);
+      }
+
+      .export-menu-item:not(:last-child) {
+        border-bottom: 1px solid #2a2a2a;
+      }
+
+      .export-menu-item:active {
+        background: #2a2a2a;
+      }
+
+      .export-menu-item svg {
+        width: 16px;
+        height: 16px;
+        color: var(--color-text-muted);
+        flex-shrink: 0;
+      }
+
+      /* Toast notification */
+      .grade-toast {
+        display: none;
+        position: fixed;
+        bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+        left: 50%;
+        transform: translateX(-50%);
+        background: #222;
+        border: 1px solid #333;
+        color: var(--color-text-primary);
+        font-size: 0.8125rem;
+        font-weight: 500;
+        padding: 10px 18px;
+        border-radius: 20px;
+        z-index: 3000;
+        white-space: nowrap;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        .grade-toast {
+          display: block;
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+
+      .grade-toast.show {
+        animation:
+          toastIn 220ms ease forwards,
+          toastOut 300ms 1800ms ease forwards;
+      }
+
+      @keyframes toastIn {
+        from {
+          opacity: 0;
+          transform: translateX(-50%) translateY(6px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+      @keyframes toastOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      /* =============================================
+       GRADE TRACKER - STYLES END
+       ============================================= */
+    </style>
+  </head>
+  <body>
+    <!-- Top Sticky Bar -->
+    <header class="sticky-header">
+      <div class="header-container">
+        <div class="search-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="text"
+            id="courseSearch"
+            placeholder="Search courses..."
+            aria-label="Search courses" />
         </div>
-        <div class="chain-modal-body">
-          <div class="chain-legend">
-            <div class="legend-item">
-              <span class="legend-dot prereq"></span>
-              <span>Prerequisites</span>
+        <div class="gwa-display" id="mainGwaDisplay">
+          <span class="gwa-label">Overall GWA</span>
+          <span class="gwa-value" id="overallGwaValue">0.0000</span>
+          <span class="gwa-count" id="overallGwaCount">0 courses</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <!-- FIRST YEAR -->
+        <div class="year-section">
+          <h2 class="year-title">First Year</h2>
+
+          <!-- First Semester -->
+          <section class="semester-section">
+            <div class="semester-header">
+              <h3>First Semester</h3>
             </div>
-            <div class="legend-item">
-              <span class="legend-dot selected"></span>
-              <span>Selected Course</span>
+            <div class="semester-content">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Descriptive Title</th>
+                      <th class="numeric">Lec</th>
+                      <th class="numeric">Lab</th>
+                      <th class="numeric">Units</th>
+                      <th class="grade-col-header">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-course-code="MATH 111">
+                      <td class="course-code">MATH 111</td>
+                      <td class="course-title">Differential Calculus</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="CHEM LEC 111">
+                      <td class="course-code">CHEM LEC 111</td>
+                      <td class="course-title"
+                        >Chemistry for Engineers (Lecture)</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="CHEM LAB 111">
+                      <td class="course-code">CHEM LAB 111</td>
+                      <td class="course-title"
+                        >Chemistry for Engineers (Laboratory)</td
+                      >
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">1</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="DRAW 111">
+                      <td class="course-code">DRAW 111</td>
+                      <td class="course-title"
+                        >Engineering Drawing and Plans</td
+                      >
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">1</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="CE 111">
+                      <td class="course-code">CE 111</td>
+                      <td class="course-title"
+                        >Civil Engineering Orientation</td
+                      >
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GE 101">
+                      <td class="course-code">GE 101</td>
+                      <td class="course-title"
+                        >Understanding the Self / Pag-unawa sa Sarili</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GE 102">
+                      <td class="course-code">GE 102</td>
+                      <td class="course-title"
+                        >The Contemporary World / Ang Kasalukuyang Daigdig</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GE 110">
+                      <td class="course-code">GE 110</td>
+                      <td class="course-title">Gender and Society</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="PE 109">
+                      <td class="course-code">PE 109</td>
+                      <td class="course-title">PATHFIT 1</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="NSTP 101">
+                      <td class="course-code">NSTP 101</td>
+                      <td class="course-title">ROTC / CWTS / LTS</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td colspan="2">Total</td>
+                      <td class="numeric">22</td>
+                      <td class="numeric">6</td>
+                      <td class="numeric">24</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="legend-item">
-              <span class="legend-dot dependent"></span>
-              <span>Dependents</span>
+          </section>
+
+          <!-- Second Semester -->
+          <section class="semester-section">
+            <div class="semester-header">
+              <h3>Second Semester</h3>
             </div>
+            <div class="semester-content">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Descriptive Title</th>
+                      <th class="numeric">Lec</th>
+                      <th class="numeric">Lab</th>
+                      <th class="numeric">Units</th>
+                      <th class="grade-col-header">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      data-course-code="MATH 122"
+                      data-prerequisites="MATH 111">
+                      <td class="course-code">MATH 122</td>
+                      <td class="course-title">Integral Calculus</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">MATH 111</td>
+                    </tr>
+                    <tr
+                      data-course-code="PHYS 121"
+                      data-prerequisites="MATH 111">
+                      <td class="course-code">PHYS 121</td>
+                      <td class="course-title">Physics for Engineers</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">4</td>
+                      <td class="prerequisite has-prereq">MATH 111</td>
+                    </tr>
+                    <tr data-course-code="COMP 121">
+                      <td class="course-code">COMP 121</td>
+                      <td class="course-title"
+                        >Computer Fundamentals and Programming</td
+                      >
+                      <td class="numeric">0</td>
+                      <td class="numeric">6</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GE 103">
+                      <td class="course-code">GE 103</td>
+                      <td class="course-title"
+                        >Arts Appreciation / Pagpapahalaga sa Sining</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GE 104">
+                      <td class="course-code">GE 104</td>
+                      <td class="course-title"
+                        >Mathematics in the Modern World / Matematika sa
+                        Makabagong Daigdig</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GE 105">
+                      <td class="course-code">GE 105</td>
+                      <td class="course-title">Living in the IT Era</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="PE 110">
+                      <td class="course-code">PE 110</td>
+                      <td class="course-title">PATHFIT 2</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="NSTP 102">
+                      <td class="course-code">NSTP 102</td>
+                      <td class="course-title">ROTC / CWTS / LTS</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td colspan="2">Total</td>
+                      <td class="numeric">20</td>
+                      <td class="numeric">9</td>
+                      <td class="numeric">23</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- SECOND YEAR -->
+        <div class="year-section">
+          <h2 class="year-title">Second Year</h2>
+
+          <!-- First Semester -->
+          <section class="semester-section">
+            <div class="semester-header">
+              <h3>First Semester</h3>
+            </div>
+            <div class="semester-content">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Descriptive Title</th>
+                      <th class="numeric">Lec</th>
+                      <th class="numeric">Lab</th>
+                      <th class="numeric">Units</th>
+                      <th class="grade-col-header">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      data-course-code="MATH 213"
+                      data-prerequisites="MATH 122">
+                      <td class="course-code">MATH 213</td>
+                      <td class="course-title">Differential Equations</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">MATH 122</td>
+                    </tr>
+                    <tr
+                      data-course-code="MECH 211"
+                      data-prerequisites="MATH 122,PHYS 121">
+                      <td class="course-code">MECH 211</td>
+                      <td class="course-title">Statics of Rigid Bodies</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq"
+                        >MATH 122, PHYS 121</td
+                      >
+                    </tr>
+                    <tr
+                      data-course-code="SURV 211"
+                      data-prerequisites="DRAW 111">
+                      <td class="course-code">SURV 211</td>
+                      <td class="course-title">Fundamentals of Surveying</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">4</td>
+                      <td class="prerequisite has-prereq">DRAW 111</td>
+                    </tr>
+                    <tr data-course-code="ECON 211">
+                      <td class="course-code">ECON 211</td>
+                      <td class="course-title">Engineering Economics</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="MNGT 211">
+                      <td class="course-code">MNGT 211</td>
+                      <td class="course-title">Engineering Management</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite has-prereq">2nd year standing</td>
+                    </tr>
+                    <tr
+                      data-course-code="CAD 211"
+                      data-prerequisites="DRAW 111">
+                      <td class="course-code">CAD 211</td>
+                      <td class="course-title">Computer-Aided Drafting</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">1</td>
+                      <td class="prerequisite has-prereq">DRAW 111</td>
+                    </tr>
+                    <tr data-course-code="GE 106">
+                      <td class="course-code">GE 106</td>
+                      <td class="course-title"
+                        >Purposive Communication / Malayuning Komunikasyon</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GE 107">
+                      <td class="course-code">GE 107</td>
+                      <td class="course-title">Ethics / Etika</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="PE 111">
+                      <td class="course-code">PE 111</td>
+                      <td class="course-title">PATHFIT 3</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td colspan="2">Total</td>
+                      <td class="numeric">22</td>
+                      <td class="numeric">6</td>
+                      <td class="numeric">24</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- Second Semester -->
+          <section class="semester-section">
+            <div class="semester-header">
+              <h3>Second Semester</h3>
+            </div>
+            <div class="semester-content">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Descriptive Title</th>
+                      <th class="numeric">Lec</th>
+                      <th class="numeric">Lab</th>
+                      <th class="numeric">Units</th>
+                      <th class="grade-col-header">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      data-course-code="MATH 224"
+                      data-prerequisites="MATH 122">
+                      <td class="course-code">MATH 224</td>
+                      <td class="course-title">Engineering Data Analysis</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">MATH 122</td>
+                    </tr>
+                    <tr
+                      data-course-code="MECH 222"
+                      data-prerequisites="MECH 211">
+                      <td class="course-code">MECH 222</td>
+                      <td class="course-title">Dynamics of Rigid Bodies</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite has-prereq">MECH 211</td>
+                    </tr>
+                    <tr
+                      data-course-code="CE 221"
+                      data-prerequisites="CHEM LEC 111,MECH 211">
+                      <td class="course-code">CE 221</td>
+                      <td class="course-title"
+                        >Mechanics of Deformable Bodies</td
+                      >
+                      <td class="numeric">4</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">4</td>
+                      <td class="prerequisite has-prereq"
+                        >CHEM LEC 111 / MECH 211</td
+                      >
+                    </tr>
+                    <tr data-course-code="CE 223" data-prerequisites="CE 221">
+                      <td class="course-code">CE 223</td>
+                      <td class="course-title"
+                        >Construction Materials and Testing</td
+                      >
+                      <td class="numeric">2</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">CO-REQ CE 221</td>
+                    </tr>
+                    <tr data-course-code="CE 222">
+                      <td class="course-code">CE 222</td>
+                      <td class="course-title">Geology for Engineers</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GE 108">
+                      <td class="course-code">GE 108</td>
+                      <td class="course-title"
+                        >Science, Technology and Society</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GE 109">
+                      <td class="course-code">GE 109</td>
+                      <td class="course-title"
+                        >Readings in Philippine History</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="GEM 101">
+                      <td class="course-code">GEM 101</td>
+                      <td class="course-title">Life and Works of Rizal</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr data-course-code="PE 112">
+                      <td class="course-code">PE 112</td>
+                      <td class="course-title">PATHFIT 4</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td colspan="2">Total</td>
+                      <td class="numeric">24</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">25</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- THIRD YEAR -->
+        <div class="year-section">
+          <h2 class="year-title">Third Year</h2>
+
+          <!-- First Semester -->
+          <section class="semester-section">
+            <div class="semester-header">
+              <h3>First Semester</h3>
+            </div>
+            <div class="semester-content">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Descriptive Title</th>
+                      <th class="numeric">Lec</th>
+                      <th class="numeric">Lab</th>
+                      <th class="numeric">Units</th>
+                      <th class="grade-col-header">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-course-code="TECHNO 101">
+                      <td class="course-code">TECHNO 101</td>
+                      <td class="course-title">Technopreneurship 101</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">3rd year standing</td>
+                    </tr>
+                    <tr data-course-code="CE 311" data-prerequisites="CE 221">
+                      <td class="course-code">CE 311</td>
+                      <td class="course-title">Structural Theory</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">4</td>
+                      <td class="prerequisite has-prereq">CE 221</td>
+                    </tr>
+                    <tr data-course-code="CE 312" data-prerequisites="SURV 211">
+                      <td class="course-code">CE 312</td>
+                      <td class="course-title"
+                        >Highway and Railroad Engineering</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">SURV 211</td>
+                    </tr>
+                    <tr data-course-code="CE 313" data-prerequisites="PHYS 121">
+                      <td class="course-code">CE 313</td>
+                      <td class="course-title">Engineering Utilities 1</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">PHYS 121</td>
+                    </tr>
+                    <tr data-course-code="CE 314" data-prerequisites="PHYS 121">
+                      <td class="course-code">CE 314</td>
+                      <td class="course-title">Engineering Utilities 2</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">PHYS 121</td>
+                    </tr>
+                    <tr data-course-code="CE 315" data-prerequisites="MATH 213">
+                      <td class="course-code">CE 315</td>
+                      <td class="course-title"
+                        >Numerical Solutions to CE Problems</td
+                      >
+                      <td class="numeric">2</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">MATH 213</td>
+                    </tr>
+                    <tr data-course-code="GEE 108">
+                      <td class="course-code">GEE 108</td>
+                      <td class="course-title">Environmental Science</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite no-prereq">—</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td colspan="2">Total</td>
+                      <td class="numeric">20</td>
+                      <td class="numeric">6</td>
+                      <td class="numeric">22</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- Second Semester -->
+          <section class="semester-section">
+            <div class="semester-header">
+              <h3>Second Semester</h3>
+            </div>
+            <div class="semester-content">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Descriptive Title</th>
+                      <th class="numeric">Lec</th>
+                      <th class="numeric">Lab</th>
+                      <th class="numeric">Units</th>
+                      <th class="grade-col-header">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-course-code="CE 322" data-prerequisites="DRAW 111">
+                      <td class="course-code">CE 322</td>
+                      <td class="course-title">Building System Design</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">DRAW 111</td>
+                    </tr>
+                    <tr data-course-code="CE 323">
+                      <td class="course-code">CE 323</td>
+                      <td class="course-title"
+                        >CE Laws, Ethics and Standards</td
+                      >
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite has-prereq">3rd year standing</td>
+                    </tr>
+                    <tr data-course-code="CE 324">
+                      <td class="course-code">CE 324</td>
+                      <td class="course-title">Hydrology</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite has-prereq">3rd year standing</td>
+                    </tr>
+                    <tr data-course-code="CE 325">
+                      <td class="course-code">CE 325</td>
+                      <td class="course-title">Hydraulics</td>
+                      <td class="numeric">4</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">5</td>
+                      <td class="prerequisite has-prereq">3rd year standing</td>
+                    </tr>
+                    <tr data-course-code="CE 326" data-prerequisites="CE 311">
+                      <td class="course-code">CE 326</td>
+                      <td class="course-title">Principles of Steel Design</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">CE 311</td>
+                    </tr>
+                    <tr data-course-code="CE 327" data-prerequisites="CE 311">
+                      <td class="course-code">CE 327</td>
+                      <td class="course-title"
+                        >Principles of Reinforced / Pre-stressed Concrete</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">4</td>
+                      <td class="prerequisite has-prereq">CE 311</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td colspan="2">Total</td>
+                      <td class="numeric">15</td>
+                      <td class="numeric">12</td>
+                      <td class="numeric">19</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- Summer -->
+          <section class="semester-section">
+            <div class="semester-header">
+              <h3>Summer</h3>
+            </div>
+            <div class="semester-content">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Descriptive Title</th>
+                      <th class="numeric">Lec</th>
+                      <th class="numeric">Lab</th>
+                      <th class="numeric">Units</th>
+                      <th class="grade-col-header">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-course-code="OJT">
+                      <td class="course-code">OJT</td>
+                      <td class="course-title"
+                        >On-the-Job Training (240 hrs)</td
+                      >
+                      <td class="numeric">2</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">3rd year standing</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td colspan="2">Total</td>
+                      <td class="numeric">2</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- FOURTH YEAR -->
+        <div class="year-section">
+          <h2 class="year-title">Fourth Year</h2>
+
+          <!-- First Semester -->
+          <section class="semester-section">
+            <div class="semester-header">
+              <h3>First Semester</h3>
+            </div>
+            <div class="semester-content">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Descriptive Title</th>
+                      <th class="numeric">Lec</th>
+                      <th class="numeric">Lab</th>
+                      <th class="numeric">Units</th>
+                      <th class="grade-col-header">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      data-course-code="CE 411"
+                      class="has-prerequisite"
+                      data-prerequisites="CE 221">
+                      <td class="course-code">CE 411</td>
+                      <td class="course-title"
+                        >Geotechnical Engineering – Soil Mechanics</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">4</td>
+                      <td class="prerequisite has-prereq">CE 221</td>
+                    </tr>
+                    <tr
+                      data-course-code="CE 412"
+                      class="has-prerequisite"
+                      data-prerequisites="CE 312">
+                      <td class="course-code">CE 412</td>
+                      <td class="course-title"
+                        >Principles of Transportation Engineering</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">CE 312</td>
+                    </tr>
+                    <tr data-course-code="CE 413">
+                      <td class="course-code">CE 413</td>
+                      <td class="course-title">CE Project 1 with Fieldtrip</td>
+                      <td class="numeric">1</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite has-prereq">4th year standing</td>
+                    </tr>
+                    <tr
+                      data-course-code="CE 414"
+                      class="has-prerequisite"
+                      data-prerequisites="CE 322">
+                      <td class="course-code">CE 414</td>
+                      <td class="course-title">Quantity Surveying</td>
+                      <td class="numeric">1</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite has-prereq">CE 322</td>
+                    </tr>
+                    <tr data-course-code="PC 411">
+                      <td class="course-code">PC 411</td>
+                      <td class="course-title"
+                        >Specialization 1 – Reinforced Concrete Design</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">4th year standing</td>
+                    </tr>
+                    <tr data-course-code="PC 412">
+                      <td class="course-code">PC 412</td>
+                      <td class="course-title"
+                        >Specialization 2 – Design of Steel Structures</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">4th year standing</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td colspan="2">Total</td>
+                      <td class="numeric">14</td>
+                      <td class="numeric">9</td>
+                      <td class="numeric">17</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- Second Semester -->
+          <section class="semester-section">
+            <div class="semester-header">
+              <h3>Second Semester</h3>
+            </div>
+            <div class="semester-content">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Course Code</th>
+                      <th>Descriptive Title</th>
+                      <th class="numeric">Lec</th>
+                      <th class="numeric">Lab</th>
+                      <th class="numeric">Units</th>
+                      <th class="grade-col-header">Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-course-code="CE 421">
+                      <td class="course-code">CE 421</td>
+                      <td class="course-title">CE Project 2</td>
+                      <td class="numeric">1</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">2</td>
+                      <td class="prerequisite has-prereq">4th year standing</td>
+                    </tr>
+                    <tr data-course-code="CE 422">
+                      <td class="course-code">CE 422</td>
+                      <td class="course-title"
+                        >Construction Methods & Project Management</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">4th year standing</td>
+                    </tr>
+                    <tr data-course-code="PC 421">
+                      <td class="course-code">PC 421</td>
+                      <td class="course-title"
+                        >Specialization 3 – Pre-stressed Concrete Design</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">4th year standing</td>
+                    </tr>
+                    <tr data-course-code="PC 422">
+                      <td class="course-code">PC 422</td>
+                      <td class="course-title"
+                        >Specialization 4 – Foundation & Retaining Wall
+                        Design</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">4th year standing</td>
+                    </tr>
+                    <tr
+                      data-course-code="PC 423"
+                      class="has-prerequisite"
+                      data-prerequisites="CE 311">
+                      <td class="course-code">PC 423</td>
+                      <td class="course-title"
+                        >Specialization 5 – Earthquake Engineering</td
+                      >
+                      <td class="numeric">3</td>
+                      <td class="numeric">0</td>
+                      <td class="numeric">3</td>
+                      <td class="prerequisite has-prereq">CE 311</td>
+                    </tr>
+                    <tr class="total-row">
+                      <td colspan="2">Total</td>
+                      <td class="numeric">13</td>
+                      <td class="numeric">3</td>
+                      <td class="numeric">14</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        <p>BSCE Curriculum v0.3.0</p>
+        <p class="dev-credit">
+          Developed by
+          <a href="#" id="devModalOpen">@chqrlzz</a>
+        </p>
+      </footer>
+
+      <!-- Developer Modal -->
+      <div class="dev-modal-overlay" id="devModalOverlay">
+        <div class="dev-modal">
+          <button class="dev-modal-close" id="devModalClose" aria-label="Close"
+            >&times;</button
+          >
+          <div class="dev-avatar">C</div>
+          <h3 class="dev-name">chqrlzz</h3>
+          <p class="dev-role">Engineering Student & Developer</p>
+
+          <div class="dev-social-grid">
+            <a
+              href="https://m.me/chqrlzz"
+              target="_blank"
+              class="social-link messenger">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.477 2 2 6.145 2 11.258c0 2.908 1.458 5.489 3.738 7.153V22l3.41-1.871c.883.245 1.821.387 2.852.387 5.523 0 10-4.145 10-9.258S17.523 2 12 2zm1.18 12.317l-2.548-2.722-4.978 2.722 5.48-5.819 2.618 2.722 4.908-2.722-5.48 5.819z" />
+              </svg>
+              Messenger
+            </a>
+            <a
+              href="https://t.me/chqrlzz"
+              target="_blank"
+              class="social-link telegram">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.53-1.39.52-.46-.01-1.33-.26-1.98-.48-.8-.27-1.43-.42-1.37-.89.03-.25.38-.51 1.03-.78 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.13-.03.19z" />
+              </svg>
+              Telegram
+            </a>
           </div>
-          <div class="chain-graph-container" id="chainGraphContainer">
-            <!-- Graph content will be injected here -->
+        </div>
+      </div>
+
+      <!-- =============================================
+         GRADE TRACKER HTML - START
+         ============================================= -->
+
+      <!-- Grade Input Bottom Sheet -->
+      <div class="grade-sheet-overlay" id="gradeSheetOverlay">
+        <div class="grade-sheet" id="gradeSheet">
+          <div class="grade-sheet-handle"><span></span></div>
+          <div class="grade-sheet-header">
+            <div class="grade-sheet-course-code" id="gsCode">—</div>
+            <div class="grade-sheet-course-title" id="gsTitle">—</div>
+          </div>
+          <div class="grade-sheet-divider"></div>
+          <div class="grade-options" id="gradeOptions">
+            <!-- Injected by JS -->
+          </div>
+          <div class="grade-sheet-actions">
+            <button class="gs-btn gs-btn-cancel" id="gsBtnCancel"
+              >Cancel</button
+            >
+            <button class="gs-btn gs-btn-clear" id="gsBtnClear">Clear</button>
+            <button class="gs-btn gs-btn-save" id="gsBtnSave">Save</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Export FAB -->
+      <button class="export-fab" id="exportFab">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2.5">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+        Export Grades
+      </button>
+
+      <!-- Export Menu -->
+      <div class="export-menu" id="exportMenu">
+        <button class="export-menu-item" id="exportText">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+          </svg>
+          Export as Text
+        </button>
+        <button class="export-menu-item" id="exportImage">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+          Export as Image
+        </button>
+      </div>
+
+      <!-- Toast -->
+      <div class="grade-toast" id="gradeToast"></div>
+
+      <!-- =============================================
+         GRADE TRACKER HTML - END
+         ============================================= -->
+
+      <!-- Dependency Chain Modal -->
+      <div class="chain-modal-overlay" id="chainModalOverlay">
+        <div class="chain-modal">
+          <div class="chain-modal-header">
+            <h3 id="chainModalTitle">Dependency Chain</h3>
+            <button
+              class="chain-modal-close"
+              id="chainModalClose"
+              aria-label="Close modal">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="chain-modal-body">
+            <div class="chain-legend">
+              <div class="legend-item">
+                <span class="legend-dot prereq"></span>
+                <span>Prerequisites</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot selected"></span>
+                <span>Selected Course</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot dependent"></span>
+                <span>Dependents</span>
+              </div>
+            </div>
+            <div class="chain-graph-container" id="chainGraphContainer">
+              <!-- Graph content will be injected here -->
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- =============================================
+    <!-- =============================================
+       DEVELOPER MODAL LOGIC - START
+       ============================================= -->
+    <script>
+      (function () {
+        "use strict";
+
+        var openBtn = document.getElementById("devModalOpen");
+        var closeBtn = document.getElementById("devModalClose");
+        var overlay = document.getElementById("devModalOverlay");
+
+        if (!openBtn || !closeBtn || !overlay) return;
+
+        function openModal(e) {
+          e.preventDefault();
+          overlay.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          overlay.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+
+        openBtn.addEventListener("click", openModal);
+        closeBtn.addEventListener("click", closeModal);
+
+        overlay.addEventListener("click", function (e) {
+          if (e.target === overlay) closeModal();
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && overlay.classList.contains("active")) {
+            closeModal();
+          }
+        });
+      })();
+    </script>
+    <!-- =============================================
+       DEVELOPER MODAL LOGIC - END
+       ============================================= -->
+
+    <!-- =============================================
+       SEARCH & GWA LOGIC - START
+       ============================================= -->
+    <script>
+      (function() {
+        'use strict';
+
+        // --- GWA Display Update ---
+        function updateGwaDisplay() {
+          var gradesStr = localStorage.getItem('bsce_grades_v1') || '{}';
+          var grades = {};
+          try { grades = JSON.parse(gradesStr); } catch(e) {}
+
+          var totalPoints = 0;
+          var totalUnits = 0;
+          var count = 0;
+
+          // We need units for each course to calculate GWA correctly
+          // GWA = Sum(Grade * Units) / Sum(Units)
+          var allRows = document.querySelectorAll('tbody tr[data-course-code]');
+          allRows.forEach(function(row) {
+            var code = row.getAttribute('data-course-code');
+            var grade = grades[code];
+
+            if (grade) {
+              var unitsCell = row.querySelectorAll('.numeric')[2];
+              var units = parseFloat(unitsCell ? unitsCell.textContent : 0) || 0;
+              var gradeVal = parseFloat(grade);
+
+              totalPoints += (gradeVal * units);
+              totalUnits += units;
+              count++;
+            }
+          });
+
+          var gwaValueEl = document.getElementById('overallGwaValue');
+          var gwaCountEl = document.getElementById('overallGwaCount');
+
+          if (totalUnits > 0) {
+            var gwa = (totalPoints / totalUnits).toFixed(4);
+            gwaValueEl.textContent = gwa;
+            gwaCountEl.textContent = count + ' courses (' + totalUnits + ' units)';
+
+            // Change color based on GWA
+            var n = parseFloat(gwa);
+            if (n <= 1.25) gwaValueEl.style.color = '#22c55e';
+            else if (n <= 2.0) gwaValueEl.style.color = '#84cc16';
+            else if (n <= 3.0) gwaValueEl.style.color = '#fb923c';
+            else gwaValueEl.style.color = '#ef4444';
+          } else {
+            gwaValueEl.textContent = '0.0000';
+            gwaValueEl.style.color = 'var(--color-text-muted)';
+            gwaCountEl.textContent = '0 courses';
+          }
+        }
+
+        // Listen for grade changes
+        window.addEventListener('storage', function(e) {
+          if (e.key === 'bsce_grades_v1') updateGwaDisplay();
+        });
+
+        // Polling for local changes (within same tab)
+        setInterval(updateGwaDisplay, 1000);
+
+        // --- Search Logic ---
+        var searchInput = document.getElementById('courseSearch');
+
+        function performSearch() {
+          var query = searchInput.value.toLowerCase().trim();
+          var yearSections = document.querySelectorAll('.year-section');
+
+          yearSections.forEach(function(yearSection) {
+            var yearHasMatch = false;
+            var semSections = yearSection.querySelectorAll('.semester-section');
+
+            semSections.forEach(function(semSection) {
+              var semHasMatch = false;
+              var rows = semSection.querySelectorAll('tbody tr[data-course-code]');
+
+              rows.forEach(function(row) {
+                var code = row.getAttribute('data-course-code').toLowerCase();
+                var title = row.querySelector('.course-title').textContent.toLowerCase();
+
+                if (query === '' || code.includes(query) || title.includes(query)) {
+                  row.classList.remove('course-hidden');
+                  semHasMatch = true;
+                } else {
+                  row.classList.add('course-hidden');
+                }
+              });
+
+              if (semHasMatch) {
+                semSection.classList.remove('semester-hidden');
+                yearHasMatch = true;
+              } else {
+                semSection.classList.add('semester-hidden');
+              }
+            });
+
+            if (yearHasMatch) {
+              yearSection.classList.remove('year-hidden');
+            } else {
+              yearSection.classList.add('year-hidden');
+            }
+          });
+        }
+
+        searchInput.addEventListener('input', performSearch);
+
+        // Initial update
+        document.addEventListener('DOMContentLoaded', function() {
+          updateGwaDisplay();
+        });
+      })();
+    </script>
+    <!-- =============================================
+       SEARCH & GWA LOGIC - END
+       ============================================= -->
+
+    <!-- =============================================
        PREREQUISITE AWARENESS JAVASCRIPT - START
        ============================================= -->
-  <script>
-    (function() {
-      'use strict';
+    <script>
+      (function () {
+        "use strict";
 
-      // Map: prerequisite course code -> array of dependent course codes
-      var dependentCoursesMap = {};
-      // Map: course code -> course title
-      var courseTitlesMap = {};
+        // Map: prerequisite course code -> array of dependent course codes
+        var dependentCoursesMap = {};
+        // Map: course code -> course title
+        var courseTitlesMap = {};
 
-      // Build dependency map from all course rows
-      function buildDependencyMap() {
-        var allRows = document.querySelectorAll('tr[data-course-code]');
-        
-        allRows.forEach(function(row) {
-          var courseCode = row.getAttribute('data-course-code');
-          var titleCell = row.querySelector('.course-title');
-          if (titleCell) {
-            courseTitlesMap[courseCode] = titleCell.textContent.trim();
+        // Build dependency map from all course rows
+        function buildDependencyMap() {
+          var allRows = document.querySelectorAll("tr[data-course-code]");
+
+          allRows.forEach(function (row) {
+            var courseCode = row.getAttribute("data-course-code");
+            var titleCell = row.querySelector(".course-title");
+            if (titleCell) {
+              courseTitlesMap[courseCode] = titleCell.textContent.trim();
+            }
+
+            var prerequisites = row.getAttribute("data-prerequisites");
+            if (!prerequisites) {
+              return;
+            }
+
+            var dependentCourseCode = row.getAttribute("data-course-code");
+            var prerequisiteCodes = parsePrerequisiteCodes(prerequisites);
+
+            prerequisiteCodes.forEach(function (prereqCode) {
+              if (!dependentCoursesMap[prereqCode]) {
+                dependentCoursesMap[prereqCode] = [];
+              }
+              dependentCoursesMap[prereqCode].push(dependentCourseCode);
+            });
+          });
+        }
+
+        // Parse comma-separated prerequisite codes
+        function parsePrerequisiteCodes(prerequisites) {
+          return prerequisites
+            .split(",")
+            .map(function (code) {
+              return code.trim();
+            })
+            .filter(function (code) {
+              return code.length > 0;
+            });
+        }
+
+        // Get prerequisites for a course
+        function getPrerequisites(courseCode) {
+          var row = findCourseRowByCode(courseCode);
+          if (!row) return [];
+          var prerequisites = row.getAttribute("data-prerequisites");
+          if (!prerequisites) return [];
+          return parsePrerequisiteCodes(prerequisites);
+        }
+
+        // Get ALL prerequisites recursively (full chain going UP)
+        function getAllPrerequisites(courseCode, visited) {
+          visited = visited || {};
+          if (visited[courseCode]) return [];
+          visited[courseCode] = true;
+
+          var directPrereqs = getPrerequisites(courseCode);
+          var allPrereqs = [];
+
+          directPrereqs.forEach(function (prereq) {
+            // Only add if it's an actual course (exists in our data)
+            if (findCourseRowByCode(prereq)) {
+              allPrereqs.push(prereq);
+              var nestedPrereqs = getAllPrerequisites(prereq, visited);
+              nestedPrereqs.forEach(function (np) {
+                if (allPrereqs.indexOf(np) === -1) {
+                  allPrereqs.push(np);
+                }
+              });
+            }
+          });
+
+          return allPrereqs;
+        }
+
+        // Get ALL dependents recursively (full chain going DOWN)
+        function getAllDependents(courseCode, visited) {
+          visited = visited || {};
+          if (visited[courseCode]) return [];
+          visited[courseCode] = true;
+
+          var directDependents = dependentCoursesMap[courseCode] || [];
+          var allDependents = [];
+
+          directDependents.forEach(function (dep) {
+            if (findCourseRowByCode(dep)) {
+              allDependents.push(dep);
+              var nestedDeps = getAllDependents(dep, visited);
+              nestedDeps.forEach(function (nd) {
+                if (allDependents.indexOf(nd) === -1) {
+                  allDependents.push(nd);
+                }
+              });
+            }
+          });
+
+          return allDependents;
+        }
+
+        // Organize courses by depth level (for prerequisites, going up)
+        function organizePrereqsByLevel(courseCode) {
+          var levels = [];
+          var currentLevel = [courseCode];
+          var visited = {};
+          visited[courseCode] = true;
+
+          while (currentLevel.length > 0) {
+            var nextLevel = [];
+            currentLevel.forEach(function (code) {
+              var prereqs = getPrerequisites(code);
+              prereqs.forEach(function (prereq) {
+                if (!visited[prereq] && findCourseRowByCode(prereq)) {
+                  visited[prereq] = true;
+                  nextLevel.push(prereq);
+                }
+              });
+            });
+            if (nextLevel.length > 0) {
+              levels.unshift(nextLevel); // Add to beginning (going up)
+            }
+            currentLevel = nextLevel;
           }
 
-          var prerequisites = row.getAttribute('data-prerequisites');
-          if (!prerequisites) {
+          return levels;
+        }
+
+        // Organize courses by depth level (for dependents, going down)
+        function organizeDependentsByLevel(courseCode) {
+          var levels = [];
+          var currentLevel = [courseCode];
+          var visited = {};
+          visited[courseCode] = true;
+
+          while (currentLevel.length > 0) {
+            var nextLevel = [];
+            currentLevel.forEach(function (code) {
+              var deps = dependentCoursesMap[code] || [];
+              deps.forEach(function (dep) {
+                if (!visited[dep] && findCourseRowByCode(dep)) {
+                  visited[dep] = true;
+                  nextLevel.push(dep);
+                }
+              });
+            });
+            if (nextLevel.length > 0) {
+              levels.push(nextLevel); // Add to end (going down)
+            }
+            currentLevel = nextLevel;
+          }
+
+          return levels;
+        }
+
+        // Mark foundation courses (courses that ARE prerequisites for others)
+        function markFoundationCourses() {
+          Object.keys(dependentCoursesMap).forEach(function (courseCode) {
+            var row = findCourseRowByCode(courseCode);
+            if (row) {
+              row.classList.add("is-foundation");
+            }
+          });
+        }
+
+        // Mark courses that HAVE prerequisites
+        function markCoursesWithPrerequisites() {
+          var allRows = document.querySelectorAll("tr[data-prerequisites]");
+          allRows.forEach(function (row) {
+            row.classList.add("has-prerequisite");
+          });
+        }
+
+        // Find a course row by its course code
+        function findCourseRowByCode(courseCode) {
+          var normalizedCode = courseCode.trim();
+          return document.querySelector(
+            'tr[data-course-code="' + normalizedCode + '"]',
+          );
+        }
+
+        // Find all dependent course codes for a given foundation course
+        function findDependentCourses(courseCode) {
+          return dependentCoursesMap[courseCode] || [];
+        }
+
+        // Clear all highlight classes from all rows
+        function clearAllHighlights() {
+          var dependentHighlights =
+            document.querySelectorAll(".dependent-target");
+          dependentHighlights.forEach(function (row) {
+            row.classList.remove("dependent-target");
+          });
+
+          var prereqHighlights = document.querySelectorAll(
+            ".prerequisite-target",
+          );
+          prereqHighlights.forEach(function (row) {
+            row.classList.remove("prerequisite-target");
+          });
+        }
+
+        // Highlight a row as a dependent target (blue)
+        function highlightAsDependent(row) {
+          if (!row) return;
+          row.classList.add("dependent-target");
+        }
+
+        // Highlight a row as a prerequisite target (orange)
+        function highlightAsPrerequisite(row) {
+          if (!row) return;
+          row.classList.add("prerequisite-target");
+        }
+
+        // Scroll to a course row and center it on screen
+        function scrollToCourseRow(row) {
+          if (!row) return;
+
+          var rowRect = row.getBoundingClientRect();
+          var rowCenter = rowRect.top + rowRect.height / 2;
+          var viewportCenter = window.innerHeight / 2;
+          var scrollTarget = window.pageYOffset + rowCenter - viewportCenter;
+
+          window.scrollTo({
+            top: scrollTarget,
+            behavior: "smooth",
+          });
+        }
+
+        // Handle click: scroll DOWN to dependents (when clicking foundation course)
+        function handleScrollToDependent(row) {
+          var courseCode = row.getAttribute("data-course-code");
+          var dependentCodes = findDependentCourses(courseCode);
+
+          if (dependentCodes.length === 0) return;
+
+          clearAllHighlights();
+
+          var firstValidRow = null;
+          dependentCodes.forEach(function (code) {
+            var dependentRow = findCourseRowByCode(code);
+            if (dependentRow) {
+              highlightAsDependent(dependentRow);
+              if (!firstValidRow) {
+                firstValidRow = dependentRow;
+              }
+            }
+          });
+
+          if (firstValidRow) {
+            scrollToCourseRow(firstValidRow);
+          }
+        }
+
+        // Handle click: scroll UP to prerequisites (when clicking course with prerequisites)
+        function handleScrollToPrerequisite(row) {
+          var prerequisites = row.getAttribute("data-prerequisites");
+          if (!prerequisites) return;
+
+          var prerequisiteCodes = parsePrerequisiteCodes(prerequisites);
+          if (prerequisiteCodes.length === 0) return;
+
+          clearAllHighlights();
+
+          var firstValidRow = null;
+          prerequisiteCodes.forEach(function (code) {
+            var prereqRow = findCourseRowByCode(code);
+            if (prereqRow) {
+              highlightAsPrerequisite(prereqRow);
+              if (!firstValidRow) {
+                firstValidRow = prereqRow;
+              }
+            }
+          });
+
+          if (firstValidRow) {
+            scrollToCourseRow(firstValidRow);
+          }
+        }
+
+        // Create a chain node element
+        function createChainNode(courseCode, type) {
+          var node = document.createElement("div");
+          node.className = "chain-node " + type;
+          node.setAttribute("data-course-code", courseCode);
+
+          var codeSpan = document.createElement("div");
+          codeSpan.textContent = courseCode;
+          node.appendChild(codeSpan);
+
+          var title = courseTitlesMap[courseCode];
+          if (title) {
+            var titleSpan = document.createElement("div");
+            titleSpan.className = "chain-node-title";
+            titleSpan.textContent = title;
+            titleSpan.title = title;
+            node.appendChild(titleSpan);
+          }
+
+          // Click to show that course's chain
+          node.addEventListener("click", function () {
+            showChainModal(courseCode);
+          });
+
+          return node;
+        }
+
+        // Create arrow connector
+        function createArrow(direction) {
+          var arrow = document.createElement("div");
+          arrow.className = "chain-arrow " + direction;
+          if (direction === "up") {
+            arrow.innerHTML =
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>';
+          } else {
+            arrow.innerHTML =
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>';
+          }
+          return arrow;
+        }
+
+        // Show the chain modal for a course
+        function showChainModal(courseCode) {
+          var overlay = document.getElementById("chainModalOverlay");
+          var container = document.getElementById("chainGraphContainer");
+          var title = document.getElementById("chainModalTitle");
+
+          title.textContent = "Dependency Chain: " + courseCode;
+          container.innerHTML = "";
+
+          var prereqLevels = organizePrereqsByLevel(courseCode);
+          var dependentLevels = organizeDependentsByLevel(courseCode);
+
+          // Add prerequisites section (going up)
+          if (prereqLevels.length > 0) {
+            var prereqSection = document.createElement("div");
+            prereqSection.className = "chain-section";
+
+            var prereqLabel = document.createElement("div");
+            prereqLabel.className = "chain-section-label";
+            prereqLabel.textContent = "Prerequisites (courses you need first)";
+            prereqSection.appendChild(prereqLabel);
+
+            prereqLevels.forEach(function (level, idx) {
+              var levelDiv = document.createElement("div");
+              levelDiv.className = "chain-level";
+              level.forEach(function (code) {
+                levelDiv.appendChild(createChainNode(code, "prereq"));
+              });
+              prereqSection.appendChild(levelDiv);
+
+              if (idx < prereqLevels.length - 1) {
+                prereqSection.appendChild(createArrow("down"));
+              }
+            });
+
+            container.appendChild(prereqSection);
+            container.appendChild(createArrow("down"));
+          }
+
+          // Add selected course
+          var selectedSection = document.createElement("div");
+          selectedSection.className = "chain-section";
+
+          var selectedLevel = document.createElement("div");
+          selectedLevel.className = "chain-level";
+          selectedLevel.appendChild(createChainNode(courseCode, "selected"));
+          selectedSection.appendChild(selectedLevel);
+          container.appendChild(selectedSection);
+
+          // Add dependents section (going down)
+          if (dependentLevels.length > 0) {
+            container.appendChild(createArrow("down"));
+
+            var depSection = document.createElement("div");
+            depSection.className = "chain-section";
+
+            var depLabel = document.createElement("div");
+            depLabel.className = "chain-section-label";
+            depLabel.textContent = "Dependents (courses that require this)";
+            depSection.appendChild(depLabel);
+
+            dependentLevels.forEach(function (level, idx) {
+              var levelDiv = document.createElement("div");
+              levelDiv.className = "chain-level";
+              level.forEach(function (code) {
+                levelDiv.appendChild(createChainNode(code, "dependent"));
+              });
+              depSection.appendChild(levelDiv);
+
+              if (idx < dependentLevels.length - 1) {
+                depSection.appendChild(createArrow("down"));
+              }
+            });
+
+            container.appendChild(depSection);
+          }
+
+          // Show empty message if no connections
+          if (prereqLevels.length === 0 && dependentLevels.length === 0) {
+            var emptyMsg = document.createElement("div");
+            emptyMsg.className = "chain-empty";
+            emptyMsg.textContent =
+              "This course has no direct prerequisites or dependents in the curriculum.";
+            container.appendChild(emptyMsg);
+          }
+
+          overlay.classList.add("active");
+          document.body.style.overflow = "hidden";
+        }
+
+        // Close modal
+        function closeChainModal() {
+          var overlay = document.getElementById("chainModalOverlay");
+          overlay.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+
+        // Main click handler
+        // Click on COURSE CODE or TITLE -> open modal with full dependency chain
+        // Click on PREREQUISITE TEXT -> scroll UP to prerequisites (orange)
+        function handleCourseClick(event) {
+          var target = event.target;
+          var row = target.closest("tr");
+
+          if (!row || row.classList.contains("total-row")) return;
+
+          var courseCode = row.getAttribute("data-course-code");
+          if (!courseCode) return;
+
+          var isClickOnCodeOrTitle =
+            target.classList.contains("course-code") ||
+            target.classList.contains("course-title");
+          var isClickOnPrereqText =
+            target.classList.contains("prerequisite") &&
+            target.classList.contains("has-prereq");
+
+          // Case 1: Click on prerequisite text -> scroll UP to prerequisites (orange)
+          if (isClickOnPrereqText) {
+            handleScrollToPrerequisite(row);
             return;
           }
-          
-          var dependentCourseCode = row.getAttribute('data-course-code');
-          var prerequisiteCodes = parsePrerequisiteCodes(prerequisites);
-          
-          prerequisiteCodes.forEach(function(prereqCode) {
-            if (!dependentCoursesMap[prereqCode]) {
-              dependentCoursesMap[prereqCode] = [];
+
+          // Case 2: Click on code/title -> open modal with full dependency chain
+          if (isClickOnCodeOrTitle) {
+            var hasPrereqs = row.hasAttribute("data-prerequisites");
+            var hasDependents =
+              dependentCoursesMap[courseCode] &&
+              dependentCoursesMap[courseCode].length > 0;
+
+            // Only open modal if course has any connections
+            if (hasPrereqs || hasDependents) {
+              showChainModal(courseCode);
             }
-            dependentCoursesMap[prereqCode].push(dependentCourseCode);
-          });
-        });
-      }
-
-      // Parse comma-separated prerequisite codes
-      function parsePrerequisiteCodes(prerequisites) {
-        return prerequisites.split(',').map(function(code) {
-          return code.trim();
-        }).filter(function(code) {
-          return code.length > 0;
-        });
-      }
-
-      // Get prerequisites for a course
-      function getPrerequisites(courseCode) {
-        var row = findCourseRowByCode(courseCode);
-        if (!row) return [];
-        var prerequisites = row.getAttribute('data-prerequisites');
-        if (!prerequisites) return [];
-        return parsePrerequisiteCodes(prerequisites);
-      }
-
-      // Get ALL prerequisites recursively (full chain going UP)
-      function getAllPrerequisites(courseCode, visited) {
-        visited = visited || {};
-        if (visited[courseCode]) return [];
-        visited[courseCode] = true;
-
-        var directPrereqs = getPrerequisites(courseCode);
-        var allPrereqs = [];
-
-        directPrereqs.forEach(function(prereq) {
-          // Only add if it's an actual course (exists in our data)
-          if (findCourseRowByCode(prereq)) {
-            allPrereqs.push(prereq);
-            var nestedPrereqs = getAllPrerequisites(prereq, visited);
-            nestedPrereqs.forEach(function(np) {
-              if (allPrereqs.indexOf(np) === -1) {
-                allPrereqs.push(np);
-              }
-            });
+            return;
           }
-        });
-
-        return allPrereqs;
-      }
-
-      // Get ALL dependents recursively (full chain going DOWN)
-      function getAllDependents(courseCode, visited) {
-        visited = visited || {};
-        if (visited[courseCode]) return [];
-        visited[courseCode] = true;
-
-        var directDependents = dependentCoursesMap[courseCode] || [];
-        var allDependents = [];
-
-        directDependents.forEach(function(dep) {
-          if (findCourseRowByCode(dep)) {
-            allDependents.push(dep);
-            var nestedDeps = getAllDependents(dep, visited);
-            nestedDeps.forEach(function(nd) {
-              if (allDependents.indexOf(nd) === -1) {
-                allDependents.push(nd);
-              }
-            });
-          }
-        });
-
-        return allDependents;
-      }
-
-      // Organize courses by depth level (for prerequisites, going up)
-      function organizePrereqsByLevel(courseCode) {
-        var levels = [];
-        var currentLevel = [courseCode];
-        var visited = {};
-        visited[courseCode] = true;
-
-        while (currentLevel.length > 0) {
-          var nextLevel = [];
-          currentLevel.forEach(function(code) {
-            var prereqs = getPrerequisites(code);
-            prereqs.forEach(function(prereq) {
-              if (!visited[prereq] && findCourseRowByCode(prereq)) {
-                visited[prereq] = true;
-                nextLevel.push(prereq);
-              }
-            });
-          });
-          if (nextLevel.length > 0) {
-            levels.unshift(nextLevel); // Add to beginning (going up)
-          }
-          currentLevel = nextLevel;
         }
 
-        return levels;
-      }
+        // Initialize the prerequisite awareness system
+        function initialize() {
+          buildDependencyMap();
+          markFoundationCourses();
+          markCoursesWithPrerequisites();
+          document.addEventListener("click", handleCourseClick);
 
-      // Organize courses by depth level (for dependents, going down)
-      function organizeDependentsByLevel(courseCode) {
-        var levels = [];
-        var currentLevel = [courseCode];
-        var visited = {};
-        visited[courseCode] = true;
+          // Modal close handlers
+          var closeBtn = document.getElementById("chainModalClose");
+          var overlay = document.getElementById("chainModalOverlay");
 
-        while (currentLevel.length > 0) {
-          var nextLevel = [];
-          currentLevel.forEach(function(code) {
-            var deps = dependentCoursesMap[code] || [];
-            deps.forEach(function(dep) {
-              if (!visited[dep] && findCourseRowByCode(dep)) {
-                visited[dep] = true;
-                nextLevel.push(dep);
-              }
-            });
-          });
-          if (nextLevel.length > 0) {
-            levels.push(nextLevel); // Add to end (going down)
-          }
-          currentLevel = nextLevel;
-        }
+          closeBtn.addEventListener("click", closeChainModal);
 
-        return levels;
-      }
-
-      // Mark foundation courses (courses that ARE prerequisites for others)
-      function markFoundationCourses() {
-        Object.keys(dependentCoursesMap).forEach(function(courseCode) {
-          var row = findCourseRowByCode(courseCode);
-          if (row) {
-            row.classList.add('is-foundation');
-          }
-        });
-      }
-
-      // Mark courses that HAVE prerequisites
-      function markCoursesWithPrerequisites() {
-        var allRows = document.querySelectorAll('tr[data-prerequisites]');
-        allRows.forEach(function(row) {
-          row.classList.add('has-prerequisite');
-        });
-      }
-
-
-      // Find a course row by its course code
-      function findCourseRowByCode(courseCode) {
-        var normalizedCode = courseCode.trim();
-        return document.querySelector('tr[data-course-code="' + normalizedCode + '"]');
-      }
-
-      // Find all dependent course codes for a given foundation course
-      function findDependentCourses(courseCode) {
-        return dependentCoursesMap[courseCode] || [];
-      }
-
-      // Clear all highlight classes from all rows
-      function clearAllHighlights() {
-        var dependentHighlights = document.querySelectorAll('.dependent-target');
-        dependentHighlights.forEach(function(row) {
-          row.classList.remove('dependent-target');
-        });
-
-        var prereqHighlights = document.querySelectorAll('.prerequisite-target');
-        prereqHighlights.forEach(function(row) {
-          row.classList.remove('prerequisite-target');
-        });
-      }
-
-      // Highlight a row as a dependent target (blue)
-      function highlightAsDependent(row) {
-        if (!row) return;
-        row.classList.add('dependent-target');
-      }
-
-      // Highlight a row as a prerequisite target (orange)
-      function highlightAsPrerequisite(row) {
-        if (!row) return;
-        row.classList.add('prerequisite-target');
-      }
-
-      // Scroll to a course row and center it on screen
-      function scrollToCourseRow(row) {
-        if (!row) return;
-        
-        var rowRect = row.getBoundingClientRect();
-        var rowCenter = rowRect.top + (rowRect.height / 2);
-        var viewportCenter = window.innerHeight / 2;
-        var scrollTarget = window.pageYOffset + rowCenter - viewportCenter;
-        
-        window.scrollTo({
-          top: scrollTarget,
-          behavior: 'smooth'
-        });
-      }
-
-      // Handle click: scroll DOWN to dependents (when clicking foundation course)
-      function handleScrollToDependent(row) {
-        var courseCode = row.getAttribute('data-course-code');
-        var dependentCodes = findDependentCourses(courseCode);
-        
-        if (dependentCodes.length === 0) return;
-
-        clearAllHighlights();
-
-        var firstValidRow = null;
-        dependentCodes.forEach(function(code) {
-          var dependentRow = findCourseRowByCode(code);
-          if (dependentRow) {
-            highlightAsDependent(dependentRow);
-            if (!firstValidRow) {
-              firstValidRow = dependentRow;
+          overlay.addEventListener("click", function (e) {
+            if (e.target === overlay) {
+              closeChainModal();
             }
-          }
-        });
+          });
 
-        if (firstValidRow) {
-          scrollToCourseRow(firstValidRow);
-        }
-      }
-
-      // Handle click: scroll UP to prerequisites (when clicking course with prerequisites)
-      function handleScrollToPrerequisite(row) {
-        var prerequisites = row.getAttribute('data-prerequisites');
-        if (!prerequisites) return;
-
-        var prerequisiteCodes = parsePrerequisiteCodes(prerequisites);
-        if (prerequisiteCodes.length === 0) return;
-
-        clearAllHighlights();
-
-        var firstValidRow = null;
-        prerequisiteCodes.forEach(function(code) {
-          var prereqRow = findCourseRowByCode(code);
-          if (prereqRow) {
-            highlightAsPrerequisite(prereqRow);
-            if (!firstValidRow) {
-              firstValidRow = prereqRow;
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+              closeChainModal();
             }
-          }
-        });
-
-        if (firstValidRow) {
-          scrollToCourseRow(firstValidRow);
-        }
-      }
-
-      // Create a chain node element
-      function createChainNode(courseCode, type) {
-        var node = document.createElement('div');
-        node.className = 'chain-node ' + type;
-        node.setAttribute('data-course-code', courseCode);
-        
-        var codeSpan = document.createElement('div');
-        codeSpan.textContent = courseCode;
-        node.appendChild(codeSpan);
-
-        var title = courseTitlesMap[courseCode];
-        if (title) {
-          var titleSpan = document.createElement('div');
-          titleSpan.className = 'chain-node-title';
-          titleSpan.textContent = title;
-          titleSpan.title = title;
-          node.appendChild(titleSpan);
+          });
         }
 
-        // Click to show that course's chain
-        node.addEventListener('click', function() {
-          showChainModal(courseCode);
-        });
-
-        return node;
-      }
-
-      // Create arrow connector
-      function createArrow(direction) {
-        var arrow = document.createElement('div');
-        arrow.className = 'chain-arrow ' + direction;
-        if (direction === 'up') {
-          arrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>';
+        // Run initialization when DOM is ready
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", initialize);
         } else {
-          arrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>';
+          initialize();
         }
-        return arrow;
-      }
-
-      // Show the chain modal for a course
-      function showChainModal(courseCode) {
-        var overlay = document.getElementById('chainModalOverlay');
-        var container = document.getElementById('chainGraphContainer');
-        var title = document.getElementById('chainModalTitle');
-        
-        title.textContent = 'Dependency Chain: ' + courseCode;
-        container.innerHTML = '';
-
-        var prereqLevels = organizePrereqsByLevel(courseCode);
-        var dependentLevels = organizeDependentsByLevel(courseCode);
-
-        // Add prerequisites section (going up)
-        if (prereqLevels.length > 0) {
-          var prereqSection = document.createElement('div');
-          prereqSection.className = 'chain-section';
-          
-          var prereqLabel = document.createElement('div');
-          prereqLabel.className = 'chain-section-label';
-          prereqLabel.textContent = 'Prerequisites (courses you need first)';
-          prereqSection.appendChild(prereqLabel);
-
-          prereqLevels.forEach(function(level, idx) {
-            var levelDiv = document.createElement('div');
-            levelDiv.className = 'chain-level';
-            level.forEach(function(code) {
-              levelDiv.appendChild(createChainNode(code, 'prereq'));
-            });
-            prereqSection.appendChild(levelDiv);
-            
-            if (idx < prereqLevels.length - 1) {
-              prereqSection.appendChild(createArrow('down'));
-            }
-          });
-
-          container.appendChild(prereqSection);
-          container.appendChild(createArrow('down'));
-        }
-
-        // Add selected course
-        var selectedSection = document.createElement('div');
-        selectedSection.className = 'chain-section';
-        
-        var selectedLevel = document.createElement('div');
-        selectedLevel.className = 'chain-level';
-        selectedLevel.appendChild(createChainNode(courseCode, 'selected'));
-        selectedSection.appendChild(selectedLevel);
-        container.appendChild(selectedSection);
-
-        // Add dependents section (going down)
-        if (dependentLevels.length > 0) {
-          container.appendChild(createArrow('down'));
-          
-          var depSection = document.createElement('div');
-          depSection.className = 'chain-section';
-          
-          var depLabel = document.createElement('div');
-          depLabel.className = 'chain-section-label';
-          depLabel.textContent = 'Dependents (courses that require this)';
-          depSection.appendChild(depLabel);
-
-          dependentLevels.forEach(function(level, idx) {
-            var levelDiv = document.createElement('div');
-            levelDiv.className = 'chain-level';
-            level.forEach(function(code) {
-              levelDiv.appendChild(createChainNode(code, 'dependent'));
-            });
-            depSection.appendChild(levelDiv);
-            
-            if (idx < dependentLevels.length - 1) {
-              depSection.appendChild(createArrow('down'));
-            }
-          });
-
-          container.appendChild(depSection);
-        }
-
-        // Show empty message if no connections
-        if (prereqLevels.length === 0 && dependentLevels.length === 0) {
-          var emptyMsg = document.createElement('div');
-          emptyMsg.className = 'chain-empty';
-          emptyMsg.textContent = 'This course has no direct prerequisites or dependents in the curriculum.';
-          container.appendChild(emptyMsg);
-        }
-
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      // Close modal
-      function closeChainModal() {
-        var overlay = document.getElementById('chainModalOverlay');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-
-      // Main click handler
-      // Click on COURSE CODE or TITLE -> open modal with full dependency chain
-      // Click on PREREQUISITE TEXT -> scroll UP to prerequisites (orange)
-      function handleCourseClick(event) {
-        var target = event.target;
-        var row = target.closest('tr');
-        
-        if (!row || row.classList.contains('total-row')) return;
-
-        var courseCode = row.getAttribute('data-course-code');
-        if (!courseCode) return;
-
-        var isClickOnCodeOrTitle = target.classList.contains('course-code') || 
-                                    target.classList.contains('course-title');
-        var isClickOnPrereqText = target.classList.contains('prerequisite') && 
-                                   target.classList.contains('has-prereq');
-
-        // Case 1: Click on prerequisite text -> scroll UP to prerequisites (orange)
-        if (isClickOnPrereqText) {
-          handleScrollToPrerequisite(row);
-          return;
-        }
-
-        // Case 2: Click on code/title -> open modal with full dependency chain
-        if (isClickOnCodeOrTitle) {
-          var hasPrereqs = row.hasAttribute('data-prerequisites');
-          var hasDependents = dependentCoursesMap[courseCode] && dependentCoursesMap[courseCode].length > 0;
-          
-          // Only open modal if course has any connections
-          if (hasPrereqs || hasDependents) {
-            showChainModal(courseCode);
-          }
-          return;
-        }
-      }
-
-      // Initialize the prerequisite awareness system
-      function initialize() {
-        buildDependencyMap();
-        markFoundationCourses();
-        markCoursesWithPrerequisites();
-        document.addEventListener('click', handleCourseClick);
-
-        // Modal close handlers
-        var closeBtn = document.getElementById('chainModalClose');
-        var overlay = document.getElementById('chainModalOverlay');
-        
-        closeBtn.addEventListener('click', closeChainModal);
-        
-        overlay.addEventListener('click', function(e) {
-          if (e.target === overlay) {
-            closeChainModal();
-          }
-        });
-
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape') {
-            closeChainModal();
-          }
-        });
-      }
-
-      // Run initialization when DOM is ready
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initialize);
-      } else {
-        initialize();
-      }
-    })();
-  </script>
-  <!-- =============================================
+      })();
+    </script>
+    <!-- =============================================
        PREREQUISITE AWARENESS JAVASCRIPT - END
        ============================================= -->
 
-</body>
+    <!-- =============================================
+       GRADE TRACKER JAVASCRIPT - START
+       ============================================= -->
+    <script>
+        (function() {
+          'use strict';
+
+          var STORAGE_KEY = 'bsce_grades_v1';
+          var GRADE_OPTIONS = [
+            { value: '1.00', label: 'Excellent' },
+            { value: '1.25', label: 'Excellent' },
+            { value: '1.50', label: 'Very Good' },
+            { value: '1.75', label: 'Very Good' },
+            { value: '2.00', label: 'Good' },
+            { value: '2.25', label: 'Good' },
+            { value: '2.50', label: 'Average' },
+            { value: '2.75', label: 'Passing' },
+            { value: '3.00', label: 'Passing' },
+            { value: '5.00', label: 'Failed' }
+          ];
+
+          function gradeClass(g) {
+            var n = parseFloat(g);
+            if (n <= 1.25) return 'g-excellent';
+            if (n <= 1.75) return 'g-good';
+            if (n <= 2.25) return 'g-average'; // reusing label but distinct look
+            if (n <= 3.00) return 'g-passing';
+            return 'g-failed';
+          }
+
+          function rowGradeClass(g) {
+            var n = parseFloat(g);
+            if (n <= 1.25) return 'graded-excellent';
+            if (n <= 1.75) return 'graded-good';
+            if (n <= 2.25) return 'graded-average';
+            if (n <= 3.00) return 'graded-passing';
+            return 'graded-failed';
+          }
+
+          // --- Storage ---
+          function loadGrades() {
+            try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+            catch(e) { return {}; }
+          }
+
+          function saveGrades(data) {
+            try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }
+            catch(e) {}
+          }
+
+          // --- Inject grade cells into every data row ---
+          function injectGradeCells() {
+            var grades = loadGrades();
+            var rows = document.querySelectorAll('tbody tr[data-course-code]');
+            rows.forEach(function(row) {
+              var code = row.getAttribute('data-course-code');
+              var td = document.createElement('td');
+              td.className = 'grade-col-cell';
+              td.setAttribute('data-grade-cell', code);
+
+              var pill = document.createElement('button');
+              pill.className = 'grade-pill';
+              pill.setAttribute('aria-label', 'Set grade for ' + code);
+              pill.textContent = grades[code] ? grades[code] : '+';
+
+              if (grades[code]) {
+                pill.classList.add(gradeClass(grades[code]));
+                row.className = (row.className + ' ' + rowGradeClass(grades[code])).trim();
+              }
+
+              pill.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openSheet(row, code);
+              });
+
+              td.appendChild(pill);
+              row.appendChild(td);
+            });
+          }
+
+          // --- Bottom Sheet State ---
+          var currentCode = null;
+          var selectedGrade = null;
+
+          function openSheet(row, code) {
+            var grades = loadGrades();
+            currentCode = code;
+            selectedGrade = grades[code] || null;
+
+            var titleEl = row.querySelector('.course-title');
+            document.getElementById('gsCode').textContent = code;
+            document.getElementById('gsTitle').textContent = titleEl ? titleEl.textContent : '';
+
+            // Render grade option buttons
+            var container = document.getElementById('gradeOptions');
+            container.innerHTML = '';
+            GRADE_OPTIONS.forEach(function(opt) {
+              var btn = document.createElement('button');
+              btn.className = 'grade-option-btn';
+              btn.setAttribute('data-grade', opt.value);
+              if (selectedGrade === opt.value) btn.classList.add('selected');
+
+              var valDiv = document.createElement('div');
+              valDiv.className = 'grade-option-value';
+              valDiv.textContent = opt.value;
+
+              var lblDiv = document.createElement('div');
+              lblDiv.className = 'grade-option-label';
+              lblDiv.textContent = opt.label;
+
+              btn.appendChild(valDiv);
+              btn.appendChild(lblDiv);
+
+              btn.addEventListener('click', function() {
+                selectedGrade = opt.value;
+                container.querySelectorAll('.grade-option-btn').forEach(function(b) {
+                  b.classList.remove('selected');
+                });
+                btn.classList.add('selected');
+              });
+
+              container.appendChild(btn);
+            });
+
+            var overlay = document.getElementById('gradeSheetOverlay');
+            overlay.style.pointerEvents = 'auto';
+            overlay.style.visibility = 'visible';
+            overlay.classList.remove('closing');
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+          }
+
+          function closeSheet(instant) {
+            var overlay = document.getElementById('gradeSheetOverlay');
+            if (instant) {
+              overlay.classList.remove('open', 'closing');
+              overlay.style.visibility = 'hidden';
+              document.body.style.overflow = '';
+              return;
+            }
+            overlay.classList.remove('open');
+            overlay.classList.add('closing');
+            setTimeout(function() {
+              overlay.classList.remove('closing');
+              overlay.style.visibility = 'hidden';
+              document.body.style.overflow = '';
+            }, 200);
+          }
+
+          function saveCurrentGrade() {
+            if (!currentCode) return;
+            var grades = loadGrades();
+            if (selectedGrade) {
+              grades[currentCode] = selectedGrade;
+            } else {
+              delete grades[currentCode];
+            }
+            saveGrades(grades);
+            refreshPill(currentCode, selectedGrade);
+            closeSheet();
+            showToast(selectedGrade ? 'Grade saved — ' + currentCode + ': ' + selectedGrade : 'Grade cleared');
+          }
+
+          function clearCurrentGrade() {
+            if (!currentCode) return;
+            selectedGrade = null;
+            var grades = loadGrades();
+            delete grades[currentCode];
+            saveGrades(grades);
+            refreshPill(currentCode, null);
+            closeSheet();
+            showToast('Grade cleared');
+          }
+
+          function refreshPill(code, grade) {
+            var pills = document.querySelectorAll('[data-grade-cell="' + code + '"] .grade-pill');
+            var rows = document.querySelectorAll('tr[data-course-code="' + code + '"]');
+
+            pills.forEach(function(pill) {
+              pill.textContent = grade || '+';
+              pill.className = 'grade-pill';
+              if (grade) pill.classList.add(gradeClass(grade));
+            });
+
+            rows.forEach(function(row) {
+              row.classList.remove('graded-excellent','graded-good','graded-average','graded-passing','graded-failed');
+              if (grade) row.classList.add(rowGradeClass(grade));
+            });
+          }
+
+          // --- Toast ---
+          function showToast(msg) {
+            var t = document.getElementById('gradeToast');
+            if (!t) return;
+            t.textContent = msg;
+            t.classList.remove('show');
+            void t.offsetWidth; // reflow
+            t.classList.add('show');
+            setTimeout(function() { t.classList.remove('show'); }, 2200);
+          }
+
+          // --- Export as Text ---
+          function exportText() {
+            var grades = loadGrades();
+            var lines = ['BSCE Curriculum — Grade Report', '================================', ''];
+
+            // Walk through years/semesters in DOM order
+            var yearSections = document.querySelectorAll('.year-section');
+            yearSections.forEach(function(yearEl) {
+              var yearTitle = yearEl.querySelector('.year-title');
+              lines.push((yearTitle ? yearTitle.textContent.trim() : 'Year') + '');
+              lines.push('');
+
+              var semSections = yearEl.querySelectorAll('.semester-section');
+              semSections.forEach(function(semEl) {
+                var semHeader = semEl.querySelector('.semester-header h3');
+                lines.push('  ' + (semHeader ? semHeader.textContent.trim() : 'Semester'));
+
+                var rows = semEl.querySelectorAll('tbody tr[data-course-code]');
+                var semGrades = [];
+                rows.forEach(function(row) {
+                  var code = row.getAttribute('data-course-code');
+                  var titleEl = row.querySelector('.course-title');
+                  var title = titleEl ? titleEl.textContent.trim() : '';
+                  var units = row.querySelectorAll('.numeric')[2];
+                  var u = units ? units.textContent.trim() : '?';
+                  var g = grades[code] || '—';
+                  var line = '    ' + code.padEnd(18) + title.substring(0,36).padEnd(38) + u + ' units   ' + g;
+                  lines.push(line);
+                  if (grades[code]) semGrades.push(parseFloat(grades[code]));
+                });
+
+                if (semGrades.length > 0) {
+                  var avg = (semGrades.reduce(function(a,b){ return a+b; }, 0) / semGrades.length).toFixed(4);
+                  lines.push('    ' + '—'.repeat(60));
+                  lines.push('    Semester GWA (graded): ' + avg + '  (' + semGrades.length + ' courses)');
+                }
+                lines.push('');
+              });
+            });
+
+            // Overall GWA
+            var allGrades = Object.values(grades).map(parseFloat);
+            if (allGrades.length > 0) {
+              var overallGwa = (allGrades.reduce(function(a,b){ return a+b; }, 0) / allGrades.length).toFixed(4);
+              lines.push('================================');
+              lines.push('Overall GWA: ' + overallGwa + ' (' + allGrades.length + ' courses graded)');
+            }
+
+            lines.push('');
+            lines.push('Exported: ' + new Date().toLocaleDateString('en-PH', { year:'numeric', month:'long', day:'numeric' }));
+
+            var text = lines.join('\n');
+            var blob = new Blob([text], { type: 'text/plain' });
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = 'BSCE_Grades_' + new Date().toISOString().slice(0,10) + '.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('Text file exported!');
+          }
+
+          // --- Export as Image (Canvas) ---
+          function exportImage() {
+            var grades = loadGrades();
+            var canvas = document.createElement('canvas');
+            var dpr = Math.min(window.devicePixelRatio || 2, 3);
+            var W = 700, PADDING = 36;
+            var lineH = 22, smallLineH = 18;
+
+            // Collect all rows for layout calculation
+            var sections = [];
+            var yearEls = document.querySelectorAll('.year-section');
+            yearEls.forEach(function(yearEl) {
+              var yearTitle = yearEl.querySelector('.year-title');
+              var sems = [];
+              yearEl.querySelectorAll('.semester-section').forEach(function(semEl) {
+                var semHeader = semEl.querySelector('.semester-header h3');
+                var rows = [];
+                semEl.querySelectorAll('tbody tr[data-course-code]').forEach(function(row) {
+                  var code = row.getAttribute('data-course-code');
+                  var titleEl = row.querySelector('.course-title');
+                  rows.push({ code: code, title: titleEl ? titleEl.textContent.trim() : '', grade: grades[code] || null });
+                });
+                sems.push({ title: semHeader ? semHeader.textContent.trim() : '', rows: rows });
+              });
+              sections.push({ title: yearTitle ? yearTitle.textContent.trim() : '', sems: sems });
+            });
+
+            // Calculate height
+            var H = 80; // header
+            sections.forEach(function(sec) {
+              H += 40; // year title
+              sec.sems.forEach(function(sem) {
+                H += 30; // sem header
+                H += sem.rows.length * 28; // rows
+                H += 16; // spacing
+              });
+            });
+            H += 60; // footer
+
+            canvas.width = W * dpr;
+            canvas.height = H * dpr;
+            canvas.style.width = W + 'px';
+            canvas.style.height = H + 'px';
+
+            var ctx = canvas.getContext('2d');
+            ctx.scale(dpr, dpr);
+
+            // Background
+            ctx.fillStyle = '#111111';
+            ctx.fillRect(0, 0, W, H);
+
+            // Helper: grade color
+            function gc(g) {
+              if (!g) return '#555';
+              var n = parseFloat(g);
+              if (n <= 1.25) return '#22c55e';
+              if (n <= 1.75) return '#84cc16';
+              if (n <= 2.25) return '#facc15';
+              if (n <= 3.00) return '#fb923c';
+              return '#ef4444';
+            }
+
+            var y = 0;
+
+            // Header
+            ctx.fillStyle = '#1a1a1a';
+            ctx.fillRect(0, 0, W, 68);
+            ctx.strokeStyle = '#2a2a2a';
+            ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(0, 68); ctx.lineTo(W, 68); ctx.stroke();
+
+            ctx.fillStyle = '#eeeeee';
+            ctx.font = 'bold 18px Outfit, system-ui, sans-serif';
+            ctx.fillText('BSCE Curriculum — Grade Report', PADDING, 30);
+            ctx.fillStyle = '#666';
+            ctx.font = '12px Outfit, system-ui, sans-serif';
+            ctx.fillText('Bachelor of Science in Civil Engineering', PADDING, 50);
+
+            // Overall GWA in header
+            var allGradesImg = Object.values(grades).map(parseFloat).filter(Boolean);
+            if (allGradesImg.length > 0) {
+              var gwa = (allGradesImg.reduce(function(a,b){return a+b;},0)/allGradesImg.length).toFixed(4);
+              ctx.font = 'bold 14px Outfit, system-ui, sans-serif';
+              ctx.fillStyle = '#eeeeee';
+              var gwaText = 'GWA ' + gwa;
+              var gwaW = ctx.measureText(gwaText).width;
+              ctx.fillText(gwaText, W - PADDING - gwaW, 30);
+              ctx.font = '11px Outfit, system-ui, sans-serif';
+              ctx.fillStyle = '#666';
+              var cText = allGradesImg.length + ' graded';
+              ctx.fillText(cText, W - PADDING - ctx.measureText(cText).width, 50);
+            }
+
+            y = 80;
+
+            sections.forEach(function(sec) {
+              // Year title
+              ctx.fillStyle = '#eeeeee';
+              ctx.font = 'bold 14px Outfit, system-ui, sans-serif';
+              ctx.fillText(sec.title, PADDING, y + 20);
+              ctx.strokeStyle = '#2a2a2a';
+              ctx.lineWidth = 1;
+              ctx.beginPath(); ctx.moveTo(PADDING, y + 28); ctx.lineTo(W - PADDING, y + 28); ctx.stroke();
+              y += 40;
+
+              sec.sems.forEach(function(sem) {
+                // Sem header
+                ctx.fillStyle = '#888';
+                ctx.font = '600 11px Outfit, system-ui, sans-serif';
+                ctx.fillText(sem.title.toUpperCase(), PADDING, y + 16);
+                y += 28;
+
+                var semGradesImg = [];
+                sem.rows.forEach(function(row, i) {
+                  var isEven = i % 2 === 0;
+                  if (isEven) {
+                    ctx.fillStyle = 'rgba(255,255,255,0.02)';
+                    ctx.fillRect(PADDING - 4, y, W - PADDING * 2 + 8, 26);
+                  }
+
+                  // Course code
+                  ctx.fillStyle = '#aaa';
+                  ctx.font = '600 11px Outfit, system-ui, sans-serif';
+                  ctx.fillText(row.code, PADDING, y + 17);
+
+                  // Course title (truncated)
+                  var maxTitleW = W - PADDING * 2 - 140;
+                  ctx.fillStyle = '#ddd';
+                  ctx.font = '11px Outfit, system-ui, sans-serif';
+                  var titleStr = row.title;
+                  while (ctx.measureText(titleStr).width > maxTitleW && titleStr.length > 0) {
+                    titleStr = titleStr.slice(0, -1);
+                  }
+                  if (titleStr !== row.title) titleStr = titleStr.slice(0,-1) + '…';
+                  ctx.fillText(titleStr, PADDING + 90, y + 17);
+
+                  // Grade pill
+                  var gradeStr = row.grade || '—';
+                  ctx.font = 'bold 11px Outfit, system-ui, sans-serif';
+                  var gradeColor = gc(row.grade);
+                  if (row.grade) {
+                    // Pill background
+                    var pillW = 42, pillH = 18, pillX = W - PADDING - pillW, pillY = y + 4;
+                    ctx.fillStyle = gradeColor + '22';
+                    ctx.beginPath();
+                    ctx.roundRect(pillX, pillY, pillW, pillH, 9);
+                    ctx.fill();
+                    ctx.strokeStyle = gradeColor;
+                    ctx.lineWidth = 1;
+                    ctx.beginPath();
+                    ctx.roundRect(pillX, pillY, pillW, pillH, 9);
+                    ctx.stroke();
+                    ctx.fillStyle = gradeColor;
+                    var tw = ctx.measureText(gradeStr).width;
+                    ctx.fillText(gradeStr, pillX + (pillW - tw)/2, y + 16);
+                    semGradesImg.push(parseFloat(row.grade));
+                  } else {
+                    ctx.fillStyle = '#444';
+                    ctx.fillText('—', W - PADDING - 12, y + 17);
+                  }
+
+                  y += 26 + (i === sem.rows.length - 1 ? 2 : 0);
+                });
+
+                // Sem average
+                if (semGradesImg.length > 0) {
+                  var semAvg = (semGradesImg.reduce(function(a,b){return a+b;},0)/semGradesImg.length).toFixed(4);
+                  ctx.fillStyle = '#333';
+                  ctx.fillRect(PADDING, y, W - PADDING*2, 1);
+                  y += 6;
+                  ctx.fillStyle = '#666';
+                  ctx.font = '10px Outfit, system-ui, sans-serif';
+                  ctx.fillText('Sem GWA: ' + semAvg, PADDING, y + 10);
+                  y += 16;
+                }
+                y += 14;
+              });
+            });
+
+            // Footer
+            ctx.fillStyle = '#2a2a2a';
+            ctx.fillRect(0, H - 40, W, 1);
+            ctx.fillStyle = '#555';
+            ctx.font = '10px Outfit, system-ui, sans-serif';
+            var dateStr = 'Exported ' + new Date().toLocaleDateString('en-PH', { year:'numeric', month:'long', day:'numeric' });
+            ctx.fillText(dateStr, PADDING, H - 16);
+
+            // Download
+            canvas.toBlob(function(blob) {
+              var url = URL.createObjectURL(blob);
+              var a = document.createElement('a');
+              a.href = url;
+              a.download = 'BSCE_Grades_' + new Date().toISOString().slice(0,10) + '.png';
+              a.click();
+              URL.revokeObjectURL(url);
+              showToast('Image exported!');
+            }, 'image/png');
+          }
+
+          // --- Export FAB ---
+          function initExportFab() {
+            var fab = document.getElementById('exportFab');
+            var menu = document.getElementById('exportMenu');
+            if (!fab || !menu) return;
+
+            fab.addEventListener('click', function(e) {
+              e.stopPropagation();
+              menu.classList.toggle('open');
+            });
+
+            document.getElementById('exportText').addEventListener('click', function() {
+              menu.classList.remove('open');
+              exportText();
+            });
+
+            document.getElementById('exportImage').addEventListener('click', function() {
+              menu.classList.remove('open');
+              exportImage();
+            });
+
+            document.addEventListener('click', function() {
+              menu.classList.remove('open');
+            });
+          }
+
+          // --- Sheet event wiring ---
+          function initSheet() {
+            var overlay = document.getElementById('gradeSheetOverlay');
+            if (!overlay) return;
+            overlay.style.visibility = 'hidden';
+
+            overlay.addEventListener('click', function(e) {
+              if (e.target === overlay) closeSheet();
+            });
+
+            document.getElementById('gsBtnCancel').addEventListener('click', closeSheet);
+            document.getElementById('gsBtnSave').addEventListener('click', saveCurrentGrade);
+            document.getElementById('gsBtnClear').addEventListener('click', clearCurrentGrade);
+
+            // Swipe down to close
+            var startY = 0;
+            var sheet = document.getElementById('gradeSheet');
+            sheet.addEventListener('touchstart', function(e) { startY = e.touches[0].clientY; }, { passive: true });
+            sheet.addEventListener('touchend', function(e) {
+              if (e.changedTouches[0].clientY - startY > 60) closeSheet();
+            }, { passive: true });
+          }
+
+          // --- Init ---
+          function init() {
+            injectGradeCells();
+            initSheet();
+            initExportFab();
+          }
+
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+          } else {
+            init();
+          }
+        })();
+    </script>
+    <!-- =============================================
+       GRADE TRACKER JAVASCRIPT - END
+       ============================================= -->
+  </body>
 </html>
